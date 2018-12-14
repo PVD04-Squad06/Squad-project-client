@@ -1,11 +1,23 @@
 @import '~bootstrap/scss/bootstrap';
+@import url('https://fonts.googleapis.com/css?family=Mountains+of+Christmas');
 
-/*.card-img:hover {
-  -ms-transform: scale(1.5); /* IE 9
-  -webkit-transform: scale(1.5); /* Safari 3-8
-  transform: scale(1.5);
-} */
+.page-footer {
+  // background-image: url('/../public/bg1.jpg');
+  // background-size: auto;
+  border-style: solid;
+}
 
-#costumeList {
-  background-color: blue;
+.myVideo {
+  width: 35%;
+  opacity: 0.98;
+  position: absolute;
+}
+
+.ft-message {
+  color: white;
+  font-family: 'Mountains of Christmas', cursive;
+}
+
+.savings-msg {
+  color: white;
 }
