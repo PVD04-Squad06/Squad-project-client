@@ -1,5 +1,7 @@
 @import '~bootstrap/scss/bootstrap';
+@import url('https://fonts.googleapis.com/css?family=Mountains+of+Christmas');
 
+<<<<<<< HEAD
 .footer {
   border-style: solid;
 }
@@ -15,4 +17,25 @@
   position: relative;
   // text-align: center;
   width: 300px;
+=======
+.page-footer {
+  // background-image: url('/../public/bg1.jpg');
+  // background-size: auto;
+  border-style: solid;
+}
+
+.myVideo {
+  width: 35%;
+  opacity: 0.98;
+  position: absolute;
+}
+
+.ft-message {
+  color: white;
+  font-family: 'Mountains of Christmas', cursive;
+}
+
+.savings-msg {
+  color: white;
+>>>>>>> started prework on footer
 }
