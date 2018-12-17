@@ -36,6 +36,7 @@ const onSignOut = event => {
     .catch(ui.signOutFailure)
 }
 
+<<<<<<< HEAD
 const onAddToCart = event => {
   event.preventDefault()
   const data = getFormFields(event.target)
@@ -52,6 +53,13 @@ const onViewCart = event => {
   api.viewCart(data)
     .then(ui.viewCartSuccess)
     .catch(ui.viewCartFailure)
+=======
+const onMbrSign = event => {
+  event.preventDefault()
+  console.log('mrbsign clicked')
+  $('#mbrsign').text('You are now an exclusive member!')
+  // $('#sign-up').trigger('reset')
+>>>>>>> working footer must space out icons and add links
 }
 
 module.exports = {
@@ -59,6 +67,10 @@ module.exports = {
   onSignIn,
   onChangePassword,
   onSignOut,
+<<<<<<< HEAD
   onAddToCart,
   onViewCart
+=======
+  onMbrSign
+>>>>>>> working footer must space out icons and add links
 }
