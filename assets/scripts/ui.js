@@ -2,7 +2,7 @@
 
 const store = require('./store.js')
 $('#navbarTwo').hide()
-$('#costumeList').hide()
+$('#costumes').hide()
 $('#myModal').on('shown.bs.modal', function () {
   $('#myInput').trigger('focus')
 })
@@ -14,6 +14,10 @@ $('#PaymentInfo').click(function () {
 })
 $('#ViewCart').click(function () {
   $('#cartContent').show()
+})
+
+$('#costumeProduct').click(function () {
+  $('#costumes').show()
 })
 
 $('#exampleModal').on('show.bs.modal', function (event) {
@@ -106,6 +110,21 @@ const signOutFailure = error => {
   console.error('signOutFailure ran. Error is :', error)
 }
 
+const addToCartSuccess = data => {
+  $('#message').text('add to cart successfully')
+  $('#message').removeClass()
+  $('#message').addClass('success')
+  $('#change-password').trigger('reset')
+  console.log('addToCartSuccess ran. Data is :', data)
+}
+
+const addToCartFailure = error => {
+  $('#message').text('Error on add to cart')
+  $('#message').removeClass()
+  $('#message').addClass('failure')
+  console.error('addToCartFailure ran. Error is :', error)
+}
+
 module.exports = {
   signUpSuccess,
   signUpFailure,
@@ -114,5 +133,7 @@ module.exports = {
   changePasswordSuccess,
   changePasswordFailure,
   signOutSuccess,
-  signOutFailure
+  signOutFailure,
+  addToCartSuccess,
+  addToCartFailure
 }
