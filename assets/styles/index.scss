@@ -1,1 +1,22 @@
 @import '~bootstrap/scss/bootstrap';
+
+/*.card-img:hover {
+  -ms-transform: scale(1.5); /* IE 9
+  -webkit-transform: scale(1.5); /* Safari 3-8
+  transform: scale(1.5);
+} */
+
+#costumeList {
+  background-color: blue;
+}
+
+#jumbo {
+  background-color: pink;
+  background-image: url('../public/image/redDress.jpg');
+  background-repeat: no-repeat;
+  background-position: top right;
+}
+
+#viewDress {
+  float: center;
+}
