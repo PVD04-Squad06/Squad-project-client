@@ -1,9 +1,17 @@
 @import '~bootstrap/scss/bootstrap';
 @import url('https://fonts.googleapis.com/css?family=Mountains+of+Christmas');
 
+
+/*.card-img:hover {
+  -ms-transform: scale(1.5); /* IE 9
+  -webkit-transform: scale(1.5); /* Safari 3-8
+  transform: scale(1.5);
+} */
+
 .footer {
   border-style: solid;
 }
+
 
 .div-footer {
   background-color: rgba(0, 0, 0, 0.4);
@@ -25,4 +33,15 @@
 
 .savings-msg {
   color: white;
+}
+
+#jumbo {
+  background-color: pink;
+  background-image: url('../public/image/redDress.jpg');
+  background-repeat: no-repeat;
+  background-position: top right;
+}
+
+#viewDress {
+  float: center;
 }

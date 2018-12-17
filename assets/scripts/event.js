@@ -61,12 +61,15 @@ const onMbrSign = event => {
   // $('#sign-up').trigger('reset')
 }
 
+
 module.exports = {
   onSignUp,
   onSignIn,
   onChangePassword,
   onSignOut,
   onAddToCart,
+  onViewCart
   onViewCart,
   onMbrSign
+
 }
