@@ -97,6 +97,7 @@ const signOutSuccess = data => {
   $('#message').addClass('success')
   $('#navbarOne').show()
   $('#navbarTwo').hide()
+  $('#costumes').hide()
   $('#sign-out').modal('hide')
   $('body').removeClass('modal-open')
   $('.modal-backdrop').remove()
