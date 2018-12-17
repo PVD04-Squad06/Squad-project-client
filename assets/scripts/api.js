@@ -51,10 +51,21 @@ const addToCart = data => {
   })
 }
 
+const viewCart = function (data) {
+  return $.ajax({
+    url: config.apiUrl + '/carts/:id',
+    method: 'GET',
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    }
+  })
+}
+
 module.exports = {
   signUp,
   signIn,
   changePassword,
   signOut,
-  addToCart
+  addToCart,
+  viewCart
 }

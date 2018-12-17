@@ -45,10 +45,20 @@ const onAddToCart = event => {
     .catch(ui.addToCartFailure)
 }
 
+const onViewCart = event => {
+  event.preventDefault()
+  const data = getFormFields(event.target)
+  console.log(data)
+  api.viewCart(data)
+    .then(ui.viewCartSuccess)
+    .catch(ui.viewCartFailure)
+}
+
 module.exports = {
   onSignUp,
   onSignIn,
   onChangePassword,
   onSignOut,
-  onAddToCart
+  onAddToCart,
+  onViewCart
 }
