@@ -2,6 +2,7 @@
 
 const store = require('./store.js')
 $('#navbarTwo').hide()
+
 // $('#products').hide()
 $('#sidebar').hide()
 $('#myModal').on('shown.bs.modal', function () {
