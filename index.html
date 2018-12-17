@@ -97,15 +97,19 @@
 <div class="collapse navbar-collapse" id="navbarSupportedContent">
   <ul class="navbar-nav mr-auto">
     <li class="nav-item active">
-      <a id='home'>Home <span class="sr-only">(current)</span></a>
+      <button type='submit' id='home' class="btn btn-primary">Home <span class="sr-only">(current)</span></a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" id='PaymentInfo'>PaymentInfo</a>
+      <form id='PaymentInfo'>
+        <button type='submit' class="btn btn-primary">PaymentInfo</button>
+      </form>
     </li>
     <li class="nav-item">
-      <button id='costumeProduct' class='btn btn-primary'>CostumeProduct</button>
+      <form id='view-cart'>
+        <button type="submit" class="btn btn-primary">View Cart</button>
+      </form>
+
     </li>
-    <li>
 
       <!-- Button trigger modal -->
       <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal-two">
@@ -147,8 +151,13 @@
     <form id='sign-out'>
       <button type="submit" class="btn btn-primary">SignOut</button>
     </form>
-
   </li>
+  <li>
+  <form class="form-inline my-2 my-lg-0">
+    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+  </form>
+</li>
 </ul>
 </div>
 </nav>
@@ -173,15 +182,15 @@
 </div>
 
 <!--card content for costume-->
-<div class='container' id='costumes'>
+<div class='container' id='productList'>
 <div class="row">
 <div class="col-sm-4">
   <div class="card">
     <div class="card-body">
-      <h5 class="card-title">Wonder Woman costume</h5>
+      <h5 class="card-title"></h5>
       <form id='costumeList'>
-      <img class="card-img" src='https://i.imgur.com/VPuhi9k.jpg' alt="Card image">
-      <p class="card-text">Item for Womens Wonder Woman Costume</p>
+      <img class="card-img" alt="Card image">
+      <p class="card-text"></p>
       <button type='submit' class="btn btn-primary">Add to cart</button>
       <a href="#" class="btn btn-primary">Checkout Now</a>
     </form>
@@ -191,9 +200,9 @@
 <div class="col-sm-4">
   <div class="card">
     <div class="card-body">
-      <h5 class="card-title">Superman</h5>
-      <img class="card-img" src='https://i.imgur.com/Rj1q0s0.jpg' alt="Card image">
-      <p class="card-text">Superman costume</p>
+      <h5 class="card-title"></h5>
+      <img class="card-img"  alt="Card image">
+      <p class="card-text"></p>
       <button type='submit' class="btn btn-primary">Add to cart</button>
       <a href="#" class="btn btn-primary">Checkout Now</a>
     </div>
@@ -202,9 +211,9 @@
 <div class="col-sm-4">
   <div class="card">
     <div class="card-body">
-      <h5 class="card-title">Goku constume</h5>
-      <img class="card-img" src='https://i.imgur.com/EOZimNx.jpg' alt="Card image">
-      <p class="card-text">CosFantasy Unisex Cosplay Son Goku</p>
+      <h5 class="card-title"></h5>
+      <img class="card-img" alt="Card image">
+      <p class="card-text"></p>
       <button type='submit' class="btn btn-primary">Add to cart</button>
       <a href="#" class="btn btn-primary">Checkout Now</a>
     </div>
@@ -215,9 +224,9 @@
 <div class="col-sm-4">
   <div class="card">
     <div class="card-body">
-      <h5 class="card-title">Batman Costume</h5>
-      <img class="card-img" src='https://i.imgur.com/p4bzbd0.jpg' alt="Card image">
-      <p class="card-text">Adult costume of Batman. THe Michael Keaton version</p>
+      <h5 class="card-title"></h5>
+      <img class="card-img" alt="Card image">
+      <p class="card-text"><p>
       <button type='submit' class="btn btn-primary">Add to cart</button>
       <a href="#" class="btn btn-primary">Checkout Now</a>
     </div>
@@ -226,9 +235,9 @@
 <div class="col-sm-4">
   <div class="card">
     <div class="card-body">
-      <h5 class="card-title">Deadpool</h5>
-      <img class="card-img" src='https://i.imgur.com/WADzAQc.jpg' alt="Card image">
-      <p class="card-text">Adult costume of Deadpool</p>
+      <h5 class="card-title"></h5>
+      <img class="card-img" alt="Card image">
+      <p class="card-text"></p>
       <button type='submit' class="btn btn-primary">Add to cart</button>
       <a href="#" class="btn btn-primary">Checkout Now</a>
     </div>
@@ -237,9 +246,9 @@
 <div class="col-sm-4">
   <div class="card">
     <div class="card-body">
-      <h5 class="card-title">Vegeta</h5>
-      <img class="card-img" src='https://i.imgur.com/tlfJqDf.jpg' alt="Card image">
-      <p class="card-text">Saiyan saga Vegeta costume</p>
+      <h5 class="card-title"></h5>
+      <img class="card-img"  alt="Card image">
+      <p class="card-text"></p>
       <button type='submit' class="btn btn-primary">Add to cart</button>
       <a href="#" class="btn btn-primary">Checkout Now</a>
     </div>
@@ -248,20 +257,9 @@
 <div class="col-sm-4">
   <div class="card">
     <div class="card-body">
-      <h5 class="card-title">The Phoenix</h5>
-      <img class="card-img" src='https://i.imgur.com/Qy49Gov.jpg' alt="Card image">
-      <p class="card-text">The Red Phoenix costume</p>
-      <a type='submit' class="btn btn-primary">Add to cart</a>
-      <a href="#" class="btn btn-primary">Checkout Now</a>
-    </div>
-  </div>
-</div>
-<div class="col-sm-4">
-  <div class="card">
-    <div class="card-body">
-      <h5 class="card-title">Thor</h5>
-      <img class="card-img" src='https://i.imgur.com/lhZk8JN.jpg' alt="Card image">
-      <p class="card-text">Original THor costume</p>
+      <h5 class="card-title"></h5>
+      <img class="card-img" alt="Card image">
+      <p class="card-text"></p>
       <button type='submit' class="btn btn-primary">Add to cart</button>
       <a href="#" class="btn btn-primary">Checkout Now</a>
     </div>
@@ -270,20 +268,9 @@
 <div class="col-sm-4">
   <div class="card">
     <div class="card-body">
-      <h5 class="card-title">Wolverine</h5>
-      <img class="card-img" src='https://i.imgur.com/qAUOQ7F.jpg' alt="Card image">
-      <p class="card-text">Adult costume of Wolverine from the first X-men movie</p>
-      <a type='submit' class="btn btn-primary">Add to cart</a>
-      <a href="#" class="btn btn-primary">Checkout Now</a>
-    </div>
-  </div>
-</div>
-<div class="col-sm-4">
-  <div class="card">
-    <div class="card-body">
-      <h5 class="card-title">Chun Li</h5>
-      <img class="card-img" src='https://i.imgur.com/QYmnfxf.jpg' alt="Card image">
-      <p class="card-text">Cosplay comstume of Chun Li</p>
+      <h5 class="card-title"></h5>
+      <img class="card-img"  alt="Card image">
+      <p class="card-text"></p>
       <button type='submit' class="btn btn-primary">Add to cart</button>
       <a href="#" class="btn btn-primary">Checkout Now</a>
     </div>
@@ -292,9 +279,9 @@
 <div class="col-sm-4">
   <div class="card">
     <div class="card-body">
-      <h5 class="card-title">Ryu</h5>
-      <img class="card-img" src='https://i.imgur.com/8odOWH0.jpg' alt="Card image">
-      <p class="card-text">Adult costume of Wolverine from the first X-men movie</p>
+      <h5 class="card-title"></h5>
+      <img class="card-img"  alt="Card image">
+      <p class="card-text"></p>
       <button type='submit' class="btn btn-primary">Add to cart</button>
       <a href="#" class="btn btn-primary">Checkout Now</a>
     </div>
@@ -303,9 +290,31 @@
 <div class="col-sm-4">
   <div class="card">
     <div class="card-body">
-      <h5 class="card-title">Broly</h5>
-      <img class="card-img" src='https://i.imgur.com/2KFPtOo.jpg' alt="Card image">
-      <p class="card-text">Costume of Broly from his latest movie</p>
+      <h5 class="card-title"></h5>
+      <img class="card-img"  alt="Card image">
+      <p class="card-text"></p>
+      <button type='submit' class="btn btn-primary">Add to cart</button>
+      <a href="#" class="btn btn-primary">Checkout Now</a>
+    </div>
+  </div>
+</div>
+<div class="col-sm-4">
+  <div class="card">
+    <div class="card-body">
+      <h5 class="card-title"></h5>
+      <img class="card-img"  alt="Card image">
+      <p class="card-text"></p>
+      <button type='submit' class="btn btn-primary">Add to cart</button>
+      <a href="#" class="btn btn-primary">Checkout Now</a>
+    </div>
+  </div>
+</div>
+<div class="col-sm-4">
+  <div class="card">
+    <div class="card-body">
+      <h5 class="card-title"></h5>
+      <img class="card-img"  alt="Card image">
+      <p class="card-text"></p>
       <button type='submit' class="btn btn-primary">Add to cart</button>
       <a href="#" class="btn btn-primary">Checkout Now</a>
     </div>

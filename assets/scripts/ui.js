@@ -2,12 +2,14 @@
 
 const store = require('./store.js')
 $('#navbarTwo').hide()
-$('#costumes').hide()
+// $('#products').hide()
+$('#sidebar').hide()
 $('#myModal').on('shown.bs.modal', function () {
   $('#myInput').trigger('focus')
 })
 $('#home').click(function () {
   $('#homeContent').show()
+  $('#products').hide()
 })
 $('#PaymentInfo').click(function () {
   $('#paymentContent').show()
@@ -16,8 +18,8 @@ $('#ViewCart').click(function () {
   $('#cartContent').show()
 })
 
-$('#costumeProduct').click(function () {
-  $('#costumes').show()
+$('#productList').click(function () {
+  $('#products').show()
 })
 
 $('#exampleModal').on('show.bs.modal', function (event) {
@@ -36,6 +38,7 @@ const signUpSuccess = data => {
   $('#message').removeClass()
   $('#message').addClass('success')
   $('#sign-up').trigger('reset')
+  $('#sidebar').show()
   $('#navbarTwo').show()
   $('#navbarOne').hide()
   $('#navbarOne').modal('hide')
@@ -58,6 +61,7 @@ const signInSuccess = data => {
   $('#message').removeClass()
   $('#message').addClass('success')
   $('#sign-in').trigger('reset')
+  $('#sidebar').show()
   $('#navbarTwo').show()
   $('#navbarOne').hide()
   $('#navbarOne').modal('hide')
@@ -103,6 +107,10 @@ const signOutSuccess = data => {
   $('.modal-backdrop').remove()
   console.log('signOutSuccess ran. Data is :', data)
 }
+$('#home').click(function () {
+  $('#homeContent').show()
+  $('#costumes').hide()
+})
 
 const signOutFailure = error => {
   $('#message').text('Error on sign out')
@@ -126,6 +134,21 @@ const addToCartFailure = error => {
   console.error('addToCartFailure ran. Error is :', error)
 }
 
+const viewCartSuccess = data => {
+  $('#message').text('view cart successfully')
+  $('#message').removeClass()
+  $('#message').addClass('success')
+  $('#change-password').trigger('reset')
+  console.log('viewCartSuccess ran. Data is :', data)
+}
+
+const viewCartFailure = error => {
+  $('#message').text('Error on view cart')
+  $('#message').removeClass()
+  $('#message').addClass('failure')
+  console.error('viewCartFailure ran. Error is :', error)
+}
+
 module.exports = {
   signUpSuccess,
   signUpFailure,
@@ -136,5 +159,7 @@ module.exports = {
   signOutSuccess,
   signOutFailure,
   addToCartSuccess,
-  addToCartFailure
+  addToCartFailure,
+  viewCartSuccess,
+  viewCartFailure
 }
