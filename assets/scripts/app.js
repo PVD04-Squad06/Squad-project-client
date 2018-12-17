@@ -15,6 +15,7 @@ $(() => {
   $('#sign-out').on('click', authEvents.onSignOut)
   $('#change-password').on('submit', authEvents.onChangePassword)
   $('#mbrsign').on('submit', authEvents.onMbrSign)
+<<<<<<< HEAD
   // browse event listener
   // $('#seeProducts').on('click', browseEvents.onGetAllProducts)
   // See specific product by clicking on product square (get products with id)
@@ -28,4 +29,6 @@ $(() => {
   $('#mens').on('click', browseEvents.onGetMensClothing)
   $('#productList').on('submit', '.add-to-cart', browseEvents.onAddToCart)
   // $('#productList').on('click', '.checkout', browseEvents.onCheckout)
+=======
+>>>>>>> working footer must space out icons and add links
 })
