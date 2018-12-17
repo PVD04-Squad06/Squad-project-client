@@ -1,6 +1,17 @@
 'use strict'
 
 const store = require('./store.js')
+// $('#navbarTwo').hide()
+$('#costumeList').hide()
+$('#home').click(function () {
+  $('#homeContent').show()
+})
+$('#PaymentInfo').click(function () {
+  $('#paymentContent').show()
+})
+$('#ViewCart').click(function () {
+  $('#cartContent').show()
+})
 
 const signUpSuccess = data => {
   store.user = data.user
@@ -8,6 +19,7 @@ const signUpSuccess = data => {
   $('#message').removeClass()
   $('#message').addClass('success')
   $('#sign-up').trigger('reset')
+  $('#navbarTwo').show()
   console.log('signUpSuccess ran. Data is :', data)
 }
 
@@ -25,6 +37,7 @@ const signInSuccess = data => {
   $('#message').removeClass()
   $('#message').addClass('success')
   $('#sign-in').trigger('reset')
+  $('#navbarTwo').show()
   console.log('signInSuccess ran. Data is :', data)
 }
 
