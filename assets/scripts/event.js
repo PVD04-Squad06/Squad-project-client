@@ -36,9 +36,39 @@ const onSignOut = event => {
     .catch(ui.signOutFailure)
 }
 
+const onAddToCart = event => {
+  event.preventDefault()
+  const data = getFormFields(event.target)
+  console.log(data)
+  api.addToCart(data)
+    .then(ui.addToCartSuccess)
+    .catch(ui.addToCartFailure)
+}
+
+const onViewCart = event => {
+  event.preventDefault()
+  const data = getFormFields(event.target)
+  console.log(data)
+  api.viewCart(data)
+    .then(ui.viewCartSuccess)
+    .catch(ui.viewCartFailure)
+}
+
+const onMbrSign = event => {
+  event.preventDefault()
+  console.log('mrbsign clicked')
+  $('#mbrsign').text('You are now an exclusive member!')
+  // $('#sign-up').trigger('reset')
+}
+
 module.exports = {
   onSignUp,
   onSignIn,
   onChangePassword,
-  onSignOut
+  onSignOut,
+  onAddToCart,
+  onViewCart
+  onViewCart,
+  onMbrSign
+
 }

@@ -24,4 +24,9 @@ $(() => {
   $('#add-to-cart').on('submit', browseEvents.onAddToCart)
   // Stripe checkout event listener
   // $('#checkout').on('submit', browseEvents.onCheckout)
+  $('#productList').on('submit', authEvents.onAddToCart)
+  $('#view-cart').on('submit', authEvents.onViewCart)
+  $('#productList').on('submit', authEvents.onAddToCart)
+  $('#view-cart').on('submit', authEvents.onViewCart)
+  $('#mbrsign').on('submit', authEvents.onMbrSign)
 })
