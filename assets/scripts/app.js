@@ -17,7 +17,6 @@ $(() => {
   // See all products (index products resource)
   // See specific product by clicking on product square (get products with id)
 
-
   // cart event listeners
   // add to cart event listener
   // buy now event listener
