@@ -1,4 +1,6 @@
 @import '~bootstrap/scss/bootstrap';
+@import url('https://fonts.googleapis.com/css?family=Mountains+of+Christmas');
+
 
 /*.card-img:hover {
   -ms-transform: scale(1.5); /* IE 9
@@ -6,8 +8,31 @@
   transform: scale(1.5);
 } */
 
-#costumeList {
-  background-color: blue;
+.footer {
+  border-style: solid;
+}
+
+
+.div-footer {
+  background-color: rgba(0, 0, 0, 0.4);
+  justify-content: space-between;
+}
+
+.smicons {
+  // border-style: solid;
+  display: inline-block;
+  position: relative;
+  // text-align: center;
+  width: 300px;
+}
+
+.ft-message {
+  color: white;
+  font-family: 'Mountains of Christmas', cursive;
+}
+
+.savings-msg {
+  color: white;
 }
 
 #jumbo {

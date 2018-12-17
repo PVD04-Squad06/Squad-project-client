@@ -15,4 +15,7 @@ $(() => {
   $('#change-password').on('submit', authEvents.onChangePassword)
   $('#productList').on('submit', authEvents.onAddToCart)
   $('#view-cart').on('submit', authEvents.onViewCart)
+  $('#productList').on('submit', authEvents.onAddToCart)
+  $('#view-cart').on('submit', authEvents.onViewCart)
+  $('#mbrsign').on('submit', authEvents.onMbrSign)
 })

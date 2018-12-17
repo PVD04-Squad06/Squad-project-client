@@ -54,6 +54,14 @@ const onViewCart = event => {
     .catch(ui.viewCartFailure)
 }
 
+const onMbrSign = event => {
+  event.preventDefault()
+  console.log('mrbsign clicked')
+  $('#mbrsign').text('You are now an exclusive member!')
+  // $('#sign-up').trigger('reset')
+}
+
+
 module.exports = {
   onSignUp,
   onSignIn,
@@ -61,4 +69,7 @@ module.exports = {
   onSignOut,
   onAddToCart,
   onViewCart
+  onViewCart,
+  onMbrSign
+
 }
