@@ -13,14 +13,9 @@ $(() => {
   $('#sign-in').on('submit', authEvents.onSignIn)
   $('#sign-out').on('submit', authEvents.onSignOut)
   $('#change-password').on('submit', authEvents.onChangePassword)
-<<<<<<< HEAD
-<<<<<<< HEAD
+
   $('#productList').on('submit', authEvents.onAddToCart)
   $('#view-cart').on('submit', authEvents.onViewCart)
-=======
+
   $('#mbrsign').on('submit', authEvents.onMbrSign)
->>>>>>> working footer must space out icons and add links
-=======
-  $('#mbrsign').on('submit', authEvents.onMbrSign)
->>>>>>> working footer must space out icons and add links
 })
