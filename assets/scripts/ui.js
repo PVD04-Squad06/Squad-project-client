@@ -1,8 +1,8 @@
 'use strict'
 
 const store = require('./store.js')
-// $('#navbarTwo').hide()
-// $('#costumeList').hide()
+$('#navbarTwo').hide()
+$('#costumeList').hide()
 $('#myModal').on('shown.bs.modal', function () {
   $('#myInput').trigger('focus')
 })
@@ -33,6 +33,10 @@ const signUpSuccess = data => {
   $('#message').addClass('success')
   $('#sign-up').trigger('reset')
   $('#navbarTwo').show()
+  $('#navbarOne').hide()
+  $('#navbarOne').modal('hide')
+  $('body').removeClass('modal-open')
+  $('.modal-backdrop').remove()
   console.log('signUpSuccess ran. Data is :', data)
 }
 
@@ -51,6 +55,10 @@ const signInSuccess = data => {
   $('#message').addClass('success')
   $('#sign-in').trigger('reset')
   $('#navbarTwo').show()
+  $('#navbarOne').hide()
+  $('#navbarOne').modal('hide')
+  $('body').removeClass('modal-open')
+  $('.modal-backdrop').remove()
   console.log('signInSuccess ran. Data is :', data)
 }
 
@@ -83,6 +91,11 @@ const signOutSuccess = data => {
   store.user = null
   $('#message').removeClass()
   $('#message').addClass('success')
+  $('#navbarOne').show()
+  $('#navbarTwo').hide()
+  $('#sign-out').modal('hide')
+  $('body').removeClass('modal-open')
+  $('.modal-backdrop').remove()
   console.log('signOutSuccess ran. Data is :', data)
 }
 
@@ -101,5 +114,5 @@ module.exports = {
   changePasswordSuccess,
   changePasswordFailure,
   signOutSuccess,
-  signOutFailure,
+  signOutFailure
 }
