@@ -3,7 +3,8 @@
 const config = require('./../config.js')
 const store = require('./../store.js')
 
-const getAllProducts = () => {
+const getAllProducts = event => {
+  console.log('getAllProducts', store.user)
   return $.ajax({
     url: config.apiUrl + '/products',
     method: 'GET',
@@ -25,7 +26,29 @@ const getAProduct = event => {
     }
   })
 }
+
+const addToCart = event => {
+  console.log(event.target)
+  const data = event.target
+  // send a patch to carts with product info
+  return $.ajax({
+    url: config.apiUrl + '/carts/:id',
+    method: 'POST',
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    },
+    data // send product price
+  })
+}
+
+// using stripe documentation to checkout
+// const checkout = event => {
+//   console.log(event.target)
+// }
+
 module.exports = {
   getAllProducts,
-  getAProduct
+  getAProduct,
+  addToCart
+  // checkout
 }

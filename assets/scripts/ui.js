@@ -2,7 +2,7 @@
 
 const store = require('./store.js')
 $('#navbarTwo').hide()
-$('#costumeList').hide()
+// $('#costumeList').hide()
 $('#myModal').on('shown.bs.modal', function () {
   $('#myInput').trigger('focus')
 })
