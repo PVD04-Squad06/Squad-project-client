@@ -67,7 +67,6 @@ module.exports = {
   onChangePassword,
   onSignOut,
   onAddToCart,
-  onViewCart
   onViewCart,
   onMbrSign
 
