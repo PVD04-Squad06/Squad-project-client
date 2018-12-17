@@ -37,6 +37,7 @@ const onSignOut = event => {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 const onAddToCart = event => {
   event.preventDefault()
   const data = getFormFields(event.target)
@@ -54,11 +55,16 @@ const onViewCart = event => {
     .then(ui.viewCartSuccess)
     .catch(ui.viewCartFailure)
 =======
+=======
+>>>>>>> working footer must space out icons and add links
 const onMbrSign = event => {
   event.preventDefault()
   console.log('mrbsign clicked')
   $('#mbrsign').text('You are now an exclusive member!')
   // $('#sign-up').trigger('reset')
+<<<<<<< HEAD
+>>>>>>> working footer must space out icons and add links
+=======
 >>>>>>> working footer must space out icons and add links
 }
 
@@ -68,8 +74,12 @@ module.exports = {
   onChangePassword,
   onSignOut,
 <<<<<<< HEAD
+<<<<<<< HEAD
   onAddToCart,
   onViewCart
+=======
+  onMbrSign
+>>>>>>> working footer must space out icons and add links
 =======
   onMbrSign
 >>>>>>> working footer must space out icons and add links
