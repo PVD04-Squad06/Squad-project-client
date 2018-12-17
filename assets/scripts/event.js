@@ -36,10 +36,19 @@ const onSignOut = event => {
     .catch(ui.signOutFailure)
 }
 
+const onAddToCart = event => {
+  event.preventDefault()
+  const data = getFormFields(event.target)
+  console.log(data)
+  api.addToCart(data)
+    .then(ui.addToCartSuccess)
+    .catch(ui.addToCartFailure)
+}
 
 module.exports = {
   onSignUp,
   onSignIn,
   onChangePassword,
-  onSignOut
+  onSignOut,
+  onAddToCart
 }

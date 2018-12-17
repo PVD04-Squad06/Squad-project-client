@@ -40,9 +40,21 @@ const signOut = () => {
   })
 }
 
+const addToCart = data => {
+  return $.ajax({
+    url: config.apiUrl + '/carts/:id',
+    method: 'PATCH',
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    },
+    data
+  })
+}
+
 module.exports = {
   signUp,
   signIn,
   changePassword,
-  signOut
+  signOut,
+  addToCart
 }
