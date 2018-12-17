@@ -13,4 +13,12 @@ $(() => {
   $('#sign-in').on('submit', authEvents.onSignIn)
   $('#sign-out').on('submit', authEvents.onSignOut)
   $('#change-password').on('submit', authEvents.onChangePassword)
+  // browse event listeners
+  // See all products (index products resource)
+  // See specific product by clicking on product square (get products with id)
+
+
+  // cart event listeners
+  // add to cart event listener
+  // buy now event listener
 })
