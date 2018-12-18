@@ -5,6 +5,7 @@ const ui = require('./ui.js')
 const onGetAllProducts = event => {
   event.preventDefault()
   console.log('onGetAllProducts', event.target)
+  document.getElementById('productList').hidden = false
   api.getAllProducts()
     .then(ui.getAllProductsSuccess)
     .catch(ui.getAllProductsFailure)

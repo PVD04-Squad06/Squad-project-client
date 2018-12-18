@@ -230,8 +230,8 @@
       <h1 class="display-4">Beautiful Dresses</h1>
       <p class="lead">The hottest style to put all eyes on you.</p>
     </div>
-    <form class='text-center'>
-      <button type="submit" id='seeProducts' class='btn btn-dark'>The hottest dresses</button>
+    <form class='text-center' id='seeProducts'>
+      <button type="submit"  class='btn btn-dark'>The hottest dresses</button>
     </form>
   </div>
 
@@ -250,9 +250,17 @@
   <!-- <button class="btn btn-primary" id='seeProducts'>Shop!</button> -->
 
 
+<!-- div slideshow for products prior to pushing buttons to see all products -->
+<div class ='container'>
+  <div id='prodSlide'>
+    <figure></figure>
+    <figure></figure>
+    <figure></figure>
+  </div>
+</div>
 <!--card content for products-->
 
-<div class='container' id='productList'>
+<div class='container' id='productList' hidden>
 <div class="row">
 <div class="col-sm-4">
   <div class="card">

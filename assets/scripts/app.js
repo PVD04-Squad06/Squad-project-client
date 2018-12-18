@@ -16,7 +16,7 @@ $(() => {
   $('#change-password').on('submit', authEvents.onChangePassword)
   // browse event listener
   // See all products (index products resource)
-  $('#seeProducts').on('click', browseEvents.onGetAllProducts)
+  $('#seeProducts').on('submit', browseEvents.onGetAllProducts)
   // See specific product by clicking on product square (get products with id)
   // $('#productId').on('submit', browseEvents.onGetAProduct)
   // cart event listeners
