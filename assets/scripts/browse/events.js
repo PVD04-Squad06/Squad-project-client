@@ -26,6 +26,15 @@ const onAddToCart = event => {
     .catch(ui.addToCartFailure)
 }
 
+const onGetWomensClothing = event => {
+  event.preventDefault()
+  api.womensClothingApi()
+    .then(ui.getWomensClothingSuccess)
+
+
+
+
+}
 // Stripe checkout
 // const onCheckout = event => {
 //   event.preventDefault()
@@ -38,6 +47,7 @@ const onAddToCart = event => {
 module.exports = {
   onGetAllProducts,
   onGetAProduct,
-  onAddToCart
+  onAddToCart,
+  onGetWomensClothing
   // onCheckout
 }

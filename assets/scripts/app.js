@@ -28,4 +28,6 @@ $(() => {
   $('#view-cart').on('submit', authEvents.onViewCart)
   $('#productList').on('submit', authEvents.onAddToCart)
   $('#mbrsign').on('submit', authEvents.onMbrSign)
+  $('#womens').on('click', browseEvents.onGetWomensClothing)
+
 })
