@@ -29,7 +29,6 @@ const getWomensClothingSuccess = function (data) {
   let content = '<div class="row">'
   const dataArray = data.products
   dataArray.forEach(function (product) {
-    // write a function that extracts last 7 letters of the image url
     let imgurUrl = product.image
     content += `<div class="col-sm-4">
       <div class="card">
