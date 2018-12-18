@@ -1,5 +1,6 @@
 ---DESCRIPTION:
 
+<<<<<<< HEAD
 This front-end project, is an e-commerce single page web application (SPA). Developed by Antonio Keo, Greg Ryan, Rakshya K., and Michael Rai. The name of this company is called Nozama. Nozama is a fictional company that sells clothing online.
 
 A customer (user) is able to set up a profile with an email and password. The system will then be able to recognize the user via a username. The user can see all products, favorite products, add products to their cart and checkout. Additionally, they will also be able to see past purchases. When the transaction is complete the user will be able to sign out.
@@ -23,3 +24,7 @@ This product will be launched as MVP. In future iterations we will address stret
 
 Among our overall planning documents, wireframes, erd and wireframes; our MVP Standards can be seen here:
 https://www.evernote.com/l/AKXK3YZk0LhH3aTagYmiMofsDHm3T_Oz9js
+=======
+# browser-template
+Squad project with Antonio, Michael, Rakshya and Greg. 
+>>>>>>> trying git procedure again
