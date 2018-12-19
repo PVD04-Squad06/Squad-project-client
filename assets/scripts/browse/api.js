@@ -46,9 +46,16 @@ const addToCart = event => {
 //   console.log(event.target)
 // }
 
-const womensClothingApi = function(){
+const womensClothingApi = function () {
   return $.ajax({
     url: config.apiUrl + '/products/womens-clothing',
+    method: 'GET'
+  })
+}
+
+const mensClothingApi = function () {
+  return $.ajax({
+    url: config.apiUrl + '/products/mens-clothing',
     method: 'GET'
   })
 }
@@ -56,6 +63,7 @@ module.exports = {
   getAllProducts,
   getAProduct,
   addToCart,
-  womensClothingApi
+  womensClothingApi,
+  mensClothingApi
   // checkout
 }

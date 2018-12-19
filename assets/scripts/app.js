@@ -29,5 +29,5 @@ $(() => {
   $('#productList').on('submit', authEvents.onAddToCart)
   $('#mbrsign').on('submit', authEvents.onMbrSign)
   $('#womens').on('click', browseEvents.onGetWomensClothing)
-
+  $('#mens').on('click', browseEvents.onGetMensClothing)
 })

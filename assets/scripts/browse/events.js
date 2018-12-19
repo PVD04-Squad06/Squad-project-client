@@ -30,13 +30,13 @@ const onGetWomensClothing = event => {
   event.preventDefault()
   api.womensClothingApi()
     .then(ui.getWomensClothingSuccess)
-
-
-
-
 }
-// Stripe checkout
-// const onCheckout = event => {
+
+const onGetMensClothing = event => {
+  event.preventDefault()
+  api.mensClothingApi()
+    .then(ui.getMensClothingSuccess)
+}
 //   event.preventDefault()
 //   console.log(event.target)
 //   api.checkout()
@@ -48,6 +48,7 @@ module.exports = {
   onGetAllProducts,
   onGetAProduct,
   onAddToCart,
-  onGetWomensClothing
+  onGetWomensClothing,
+  onGetMensClothing
   // onCheckout
 }
