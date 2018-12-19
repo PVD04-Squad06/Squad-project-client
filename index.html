@@ -111,11 +111,96 @@
       </form>
     </li>
     <li class="nav-item">
-      <form id='view-cart'>
-        <button type="submit" class="btn btn-light">View Cart</button>
+      <form id='shopping-cart'>
+        <button type="submit" class="btn btn-light">Shopping Cart</button>
       </form>
-
     </li>
+
+    <!-- Button trigger modal -->
+    <button type="button" class="btn btn-light" data-toggle="modal" data-target="#modal-four" data-whatever="@checkOut">
+      Checkout
+    </button>
+    <!-- checkOut Modal -->
+    <div class="modal fade" id="modal-four" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="profileForm"></h5>
+            <div>
+              <form id='check-out'>
+                <div class="row">
+                    <div class="col-sm-4">
+                        <h1>Checkout</h1>
+                        <h4>Your Total: ${{total}}</h4>
+                        <div id="charge-error" class="alert alert-danger {{#if noError}}hidden{{/if}}">
+                            {{errMsg}}
+                        </div>
+                        <form action="/checkout" id="checkout-form">
+                            <div class="row">
+                                <div class="col-xs-4">
+                                    <div class="form-group">
+                                        <label for="name">Name</label>
+                                        <input type="text" id="name" class="form-control" required name="name">
+                                    </div>
+                                </div>
+                                <div class="col-xs-4">
+                                    <div class="form-group">
+                                        <label for="address">Address</label>
+                                        <input type="text" id="address" class="form-control" required name="address">
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="col-xs-4">
+                                    <div class="form-group">
+                                        <label for="card-name">Card Holder Name</label>
+                                        <input type="text" id="card-name" class="form-control" required>
+                                    </div>
+                                </div>
+                                <div class="col-xs-4">
+                                    <div class="form-group">
+                                        <label for="card-number">Credit Card Number</label>
+                                        <input type="text" id="card-number" class="form-control" required>
+                                    </div>
+                                </div>
+                                <div class="col-xs-4">
+                                    <div class="row">
+                                        <div class="col-xs-2">
+                                            <div class="form-group">
+                                                <label for="card-expiry-month">Expiration Month</label>
+                                                <input type="text" id="card-expiry-month" class="form-control" required>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-4">
+                                            <div class="form-group">
+                                                <label for="card-expiry-year">Expiration Year</label>
+                                                <input type="text" id="card-expiry-year" class="form-control" required>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-4">
+                                    <div class="form-group">
+                                        <label for="card-cvc">CVC</label>
+                                        <input type="text" id="card-cvc" class="form-control" required>
+                                    </div>
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-success">Buy now</button>
+                        </form>
+                    </div>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="modal-body">
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
 
       <!-- Button trigger modal -->
       <button type="button" class="btn btn-light" data-toggle="modal" data-target="#modal-two">
@@ -153,6 +238,7 @@
         </div>
       </div>
 </li>
+<!--signOut-->
   <li class="nav-item">
     <form id='sign-out'>
       <button type="submit" class="btn btn-light">SignOut</button>
@@ -160,6 +246,7 @@
   </li>
 
 <li>
+  <!--searchbar-->
   <form class="form-inline my-2 my-lg-0">
     <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
     <button class="btn btn-outline-dark" type="submit">Search</button>
@@ -251,19 +338,17 @@
 
 
 <!--card content for products-->
-
-<div class='container' id='productList'>
+<div class='container'>
+  <form id='productList'>
 <div class="row">
 <div class="col-sm-4">
   <div class="card">
     <div class="card-body">
       <h5 class="card-title"></h5>
-      <!-- <form id='productList'> -->
       <img class="card-img" src='../public/image/blackDress.jpg' alt="Card image">
       <p class="card-text"></p>
-      <button type='submit' class="btn btn-primary" id="add-to-cart">Add to cart</button>
-      <a href="#" class="btn btn-primary" id="checkout">Checkout Now</a>
-    </form>
+      <button type='submit' class="btn btn-primary">Add to cart</button>
+      <a href="#" class="btn btn-primary">Checkout Now</a>
     </div>
   </div>
 </div>
@@ -390,7 +475,7 @@
   <div class="card">
     <div class="card-body">
       <h5 class="card-title"></h5>
-      <img class="card-img"  alt="Card image">
+      <img class="card-img"  src='../public/image/shoulderLess.jpg' alt="Card image">
       <p class="card-text"></p>
       <button type='submit' class="btn btn-primary">Add to cart</button>
       <a href="#" class="btn btn-primary">Checkout Now</a>
@@ -400,15 +485,17 @@
 <div class="col-sm-4">
   <div class="card">
     <div class="card-body">
-      <h5 class="card-title"></h5>
-      <img class="card-img"  alt="Card image">
-      <p class="card-text"></p>
+      <h5 class="card-title">Yellow Dress</h5>
+      <img class="card-img"  src='../public/image/yellowDress.jpg' alt="Card image">
+      <p class="card-text">Perfect for parties</p>
+      <p class'price'>$20</p>
       <button type='submit' class="btn btn-primary">Add to cart</button>
       <a href="#" class="btn btn-primary">Checkout Now</a>
     </div>
   </div>
 </div>
 </div>
+</form>
 </div>
     <!-- Footer -->
 
@@ -439,9 +526,10 @@
 
 
 
-
+<script type="text/javascript" src="https://js.stripe.com/v2/"></script>
+<script type="text/javascript" src="javascripts/checkout.js"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     </body>
-</html>
+</html>-->
