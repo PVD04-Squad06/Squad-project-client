@@ -61,6 +61,8 @@
                 <input type='password' name='credentials[password]' placeholder="password">
                 <input type='password' name='credentials[password_confirmation]' placeholder="Confirm password">
                 <input type="submit" value="Sign Up!">
+                <br>
+                <p id="message1"></p>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                   <span aria-hidden="true">&times;</span>
                 </button>
@@ -78,7 +80,7 @@
 
     <!-- Button trigger modal -->
 
-    <button type="button" class="btn btn-light" data-toggle="modal" data-target="#modal-three" data-whatever="@signUp">
+    <button type="button" class="btn btn-light" data-toggle="modal" data-target="#modal-three">
       SignIn!
     </button>
     <!-- Modal -->
@@ -114,14 +116,15 @@
     <span class="navbar-toggler-icon"></span>
   </button>
   <!--navbarcontent-->
-<div class="collapse navbar-collapse" id="navbarSupportedContent">
+<div class="collapse navbar-collapse align-baseline" id="navbarSupportedContent">
   <ul class="navbar-nav mr-auto">
     <li class="nav-item active">
-
+      <i class="fas fa-home"></i>
       <button type='submit' id='home' class="btn btn-light">Home <span class="sr-only">(current)</span></a>
     </li>
     <li class="nav-item">
       <form id='PaymentInfo'>
+        <i class="far fa-credit-card"></i>
         <button type='submit' class="btn btn-light">PaymentInfo</button>
 
 
@@ -129,12 +132,15 @@
     </li>
     <li class="nav-item">
       <form id='shopping-cart'>
+        <i class="fas fa-shopping-cart"></i>
         <button type="submit" class="btn btn-light">Shopping Cart</button>
+        <span class="badge badge-pill badge-light"></span>
       </form>
     </li>
 
     <!-- Button trigger modal -->
     <button type="button" class="btn btn-light" data-toggle="modal" data-target="#modal-four" data-whatever="@checkOut">
+      <i class="fas fa-shopping-bag"></i>
       Checkout
     </button>
     <!-- checkOut Modal -->
@@ -221,6 +227,7 @@
 
       <!-- Button trigger modal -->
       <button type="button" class="btn btn-light" data-toggle="modal" data-target="#modal-two">
+        <i class="fas fa-key"></i>
         Change Password
       </button>
       <!-- Modal -->
@@ -258,7 +265,7 @@
 <!--signOut-->
   <li class="nav-item">
     <form id='sign-out'>
-      <button type="submit" class="btn btn-light">SignOut</button>
+      <button type="button" class="btn btn-light"><em>Sign Out</em></button>
     </form>
   </li>
 
@@ -268,7 +275,9 @@
     <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
     <button class="btn btn-outline-dark" type="submit">Search</button>
 
+  </div>
   </form>
+
 </li>
 </ul>
 </div>
@@ -287,7 +296,10 @@
       <button type="submit" class="btn btn-dark" id="mens">Men's</button>
     </form>
   </li>
+  <div class="alert alert-dark text-center" role="alert" id="message2">
 </nav>
+
+
 
 
 
