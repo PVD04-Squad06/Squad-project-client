@@ -83,42 +83,42 @@ const signInFailure = error => {
 
 const changePasswordSuccess = data => {
   $('#message').text('Password changed successfully')
-  $('#message').removeClass()
-  $('#message').addClass('success')
+  // $('#message').removeClass()
+  // $('#message').addClass('success')
   $('#change-password').trigger('reset')
   console.log('changePasswordSuccess ran. Data is :', data)
 }
 
 const changePasswordFailure = error => {
   $('#message').text('Error on password change')
-  $('#message').removeClass()
-  $('#message').addClass('failure')
+  // $('#message').removeClass()
+  // $('#message').addClass('failure')
   console.error('changePasswordFailure ran. Error is :', error)
   alert('Password Change unsuccessful')
 }
 
 const signOutSuccess = data => {
-  $('#message').text('Signed out successfully')
+  $('#message2').text('Signed out successfully')
+  $('#message2').fadeOut(5000)
   store.user = null
-  $('#message').removeClass()
-  $('#message').addClass('success')
+  //   $('#message').removeClass()
+  //   $('#message').addClass('success')
   $('#navbarOne').show()
   $('#navbarTwo').hide()
-  $('#costumes').hide()
-  $('#sign-out').modal('hide')
-  $('body').removeClass('modal-open')
-  $('.modal-backdrop').remove()
-  console.log('signOutSuccess ran. Data is :', data)
+  //   $('#sign-out').modal('hide')
+  //   $('.modal-backdrop').remove()
+  //   console.log('signOutSuccess ran. Data is :', data)
+  // }
+  // $('#home').click(function() {
+  //       $('#homeContent').show()
+  //       $('#costumes').hide()
 }
-$('#home').click(function () {
-  $('#homeContent').show()
-  $('#costumes').hide()
-})
 
 const signOutFailure = error => {
-  $('#message').text('Error on sign out')
-  $('#message').removeClass()
-  $('#message').addClass('failure')
+  $('#message2').text('Error on sign out')
+  $('#message2').fadeOut(5000)
+  // $('#message').removeClass()
+  // $('#message').addClass('failure')
   console.error('signOutFailure ran. Error is :', error)
 }
 
