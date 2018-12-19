@@ -40,32 +40,32 @@ const signOut = () => {
   })
 }
 
-const addToCart = data => {
-  return $.ajax({
-    url: config.apiUrl + '/carts/:id',
-    method: 'PATCH',
-    headers: {
-      Authorization: 'Token token=' + store.user.token
-    },
-    data
-  })
-}
-
-const viewCart = function (data) {
-  return $.ajax({
-    url: config.apiUrl + '/carts/:id',
-    method: 'GET',
-    headers: {
-      Authorization: 'Token token=' + store.user.token
-    }
-  })
-}
+// const addToCart = data => {
+//   return $.ajax({
+//     url: config.apiUrl + '/carts/:id',
+//     method: 'PATCH',
+//     headers: {
+//       Authorization: 'Token token=' + store.user.token
+//     },
+//     data
+//   })
+// }
+//
+// const viewCart = function (data) {
+//   return $.ajax({
+//     url: config.apiUrl + '/carts/:id',
+//     method: 'GET',
+//     headers: {
+//       Authorization: 'Token token=' + store.user.token
+//     }
+//   })
+// }
 
 module.exports = {
   signUp,
   signIn,
   changePassword,
-  signOut,
-  addToCart,
-  viewCart
+  signOut
+  // addToCart,
+  // viewCart
 }

@@ -27,17 +27,18 @@ const getAProduct = event => {
   })
 }
 
-const addToCart = event => {
-  console.log(event.target)
-  const data = event.target
+const addToCart = data => {
+  // console.log($(event.target).attr('id'))
+  // define data with button's id
+  // const data =
   // send a patch to carts with product info
   return $.ajax({
     url: config.apiUrl + '/carts/:id',
-    method: 'POST',
+    method: 'PATCH',
     headers: {
       Authorization: 'Token token=' + store.user.token
     },
-    data // send product price
+    data
   })
 }
 
