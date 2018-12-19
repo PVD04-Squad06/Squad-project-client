@@ -35,7 +35,8 @@ $('#exampleModal').on('show.bs.modal', function (event) {
 
 const signUpSuccess = data => {
   store.user = data.user
-  $('#message').text('Signed up successfully')
+  $('#message2').text('Signed up successfully, you are logged in')
+  $('#message2').fadeOut(5000)
   $('#message').removeClass()
   $('#message').addClass('success')
   $('#sign-up').trigger('reset')
@@ -49,16 +50,17 @@ const signUpSuccess = data => {
 }
 
 const signUpFailure = error => {
-  $('#message').text('Error on sign up')
+  $('#message1').text('Sign-up unsuccessful')
   $('#message').removeClass()
   $('#message').addClass('failure')
   console.error('signUpFailure ran. Error is :', error)
-  alert('Sign Up unsuccessful')
+  // alert('Sign Up unsuccessful')
 }
 
 const signInSuccess = data => {
   store.user = data.user
-  $('#message').text('Signed in successfully')
+  $('#message2').text('Signed in successfully')
+  $('#message2').fadeOut(5000)
   $('#message').removeClass()
   $('#message').addClass('success')
   $('#sign-in').trigger('reset')
@@ -72,7 +74,7 @@ const signInSuccess = data => {
 }
 
 const signInFailure = error => {
-  $('#message').text('Error on sign in')
+  $('#message3').text('Error on sign in')
   $('#message').removeClass()
   $('#message').addClass('failure')
   console.error('signInFailure ran. Error is :', error)

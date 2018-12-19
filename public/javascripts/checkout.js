@@ -5,7 +5,7 @@ Stripe.setPublishableKey('pk_test_sdbWFKpjfAppbflW3ecy6sFX')
 
 const $form = $('#checkout-form')
 
-$form.submit(function (event) {
+$form.submit(function(event) {
   $form.find('button').prop('disable', true)
   Stripe.card.createToken({
     number: $('#card-number').val(),
@@ -17,14 +17,14 @@ $form.submit(function (event) {
   return false
 })
 
-const stripeResponseHandler = function (status, response) {
+const stripeResponseHandler = function(status, response) {
   if (response.error) { // Problem!
 
     // Show the errors on the form
     $('#charge-error').text(response.error.message)
     $('#charge-error').removeClass('hidden')
     $form.find('button').prop('disabled', false) // Re-enable submission
-  } else {  // Token was created!
+  } else { // Token was created!
     // Get the token ID:
     const token = response.id
 
