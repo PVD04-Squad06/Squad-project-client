@@ -131,12 +131,38 @@
       </form>
     </li>
     <li class="nav-item">
-      <form id='shopping-cart'>
+      <!-- <form id='shopping-cart'> -->
         <i class="fas fa-shopping-cart"></i>
-        <button type="submit" class="btn btn-light">Shopping Cart</button>
+        <button type="button" class="btn btn-light" data-toggle="modal" data-target="#modal-five">Shopping Cart</button>
         <span class="badge badge-pill badge-light"></span>
-      </form>
+      <!-- </form> -->
     </li>
+
+    <!-- Shopping Cart Modal -->
+    <div class="modal fade" id="modal-five" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="shopping-cart-view">Your Nozema Shopping Cart <br> <i class="fas fa-shopping-bag fa-6x"></i></h5>
+            <div>
+              <form id='view-cart'>
+                Product: <br>
+                Quantity: <br>
+                Shipping: FREE! <br>
+                Sub-Total: $0 <br>
+                <button type="submit" class="btn btn-success">Checkout</button>
+
+              </form>
+            </div>
+          </div>
+          <div class="modal-body">
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <!-- Button trigger modal -->
     <button type="button" class="btn btn-light" data-toggle="modal" data-target="#modal-four" data-whatever="@checkOut">
@@ -149,7 +175,7 @@
         <div class="modal-content">
           <div class="modal-header">
             <h5 class="modal-title" id="profileForm"></h5>
-            <div>
+            <div class="text-align-center">
               <form id='check-out'>
                 <div class="row">
                     <div class="col-sm-4">
