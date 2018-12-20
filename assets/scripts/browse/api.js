@@ -28,7 +28,7 @@ const getAProduct = event => {
 }
 
 const addToCart = data => {
-  console.log(data)
+  console.log('addToCart', data)
   store.cart.items = store.cart.items.concat(data)
   // define data with button's id
   // const data =
