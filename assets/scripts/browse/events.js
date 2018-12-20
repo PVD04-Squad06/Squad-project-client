@@ -44,7 +44,7 @@ const onAddToCart = event => {
     // console.log(product.image)
   })
   content += '</div>'
-  $('#shopping-cart').html(content)
+  $('#shopping-cart-list').html(content)
   console.log(content)
 }
 // console.log(event.target.id)
