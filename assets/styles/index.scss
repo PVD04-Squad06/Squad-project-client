@@ -26,20 +26,43 @@
   width: 300px;
 }
 
-.ft-message {
-  color: white;
-  font-family: 'Mountains of Christmas', cursive;
-}
-
 .savings-msg {
   color: white;
 }
 
+.nav-item {
+  align-content: center;
+  margin: auto;
+}
+
 #jumbo {
-  background-color: pink;
-  background-image: url('../public/image/redDress.jpg');
+  align-items: center;
+  background-color: #edeaea;
+  // background-image: url('../public/image/redDress.jpg');
   background-repeat: no-repeat;
-  background-position: top right;
+  display: flex;
+  margin: auto;
+  padding: 0em;
+}
+
+h1 {
+  font-variant: small-caps;
+  position: sticky;
+}
+
+// to denter vid carousel
+// .carousel {
+//   margin: auto;
+// }
+
+.banner__video {
+  align-content: center;
+  display: flex;
+  justify-content: center;
+}
+
+.card-body {
+  text-align: center;
 }
 
 #viewDress {

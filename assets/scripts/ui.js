@@ -81,6 +81,15 @@ const signInFailure = error => {
   alert('Sign In unsuccessful')
 }
 
+const getCartSuccess = data => {
+  store.cart = data.cart
+  console.log('getCartSuccess', data)
+}
+
+const getCartFailure = error => {
+  console.log('getCartFailure', error)
+}
+
 const changePasswordSuccess = data => {
   $('#message').text('Password changed successfully')
   // $('#message').removeClass()
@@ -122,47 +131,15 @@ const signOutFailure = error => {
   console.error('signOutFailure ran. Error is :', error)
 }
 
-const addToCartSuccess = data => {
-  $('#message').text('add to cart successfully')
-  $('#message').removeClass()
-  $('#message').addClass('success')
-  $('#change-password').trigger('reset')
-  console.log('addToCartSuccess ran. Data is :', data)
-}
-
-const addToCartFailure = error => {
-  $('#message').text('Error on add to cart')
-  $('#message').removeClass()
-  $('#message').addClass('failure')
-  console.error('addToCartFailure ran. Error is :', error)
-}
-
-const viewCartSuccess = data => {
-  $('#message').text('view cart successfully')
-  $('#message').removeClass()
-  $('#message').addClass('success')
-  $('#change-password').trigger('reset')
-  console.log('viewCartSuccess ran. Data is :', data)
-}
-
-const viewCartFailure = error => {
-  $('#message').text('Error on view cart')
-  $('#message').removeClass()
-  $('#message').addClass('failure')
-  console.error('viewCartFailure ran. Error is :', error)
-}
-
 module.exports = {
   signUpSuccess,
   signUpFailure,
   signInSuccess,
   signInFailure,
+  getCartSuccess,
+  getCartFailure,
   changePasswordSuccess,
   changePasswordFailure,
   signOutSuccess,
-  signOutFailure,
-  addToCartSuccess,
-  addToCartFailure,
-  viewCartSuccess,
-  viewCartFailure
+  signOutFailure
 }
