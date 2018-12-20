@@ -23,7 +23,6 @@ const onAddToCart = event => {
   event.preventDefault()
   console.log('inside onAddToCart')
   // console.log(event.target.id)
-  console.log($(event.target).attr('id'))
   const data = $(event.target).attr('id')
   api.addToCart(data)
     .then(ui.addToCartSuccess)

@@ -39,7 +39,6 @@ const getWomensClothingSuccess = function (data) {
           <img class="card-img" src='${imgurUrl}.jpg' alt="Card image">
           <p class="card-text"></p>
           <button class="btn btn-primary add-to-cart" id="${product._id}">Add to cart</button>
-          <a href="#" class="btn btn-primary" id="checkout">Checkout Now</a>
         </div>
       </div>
     </div>`

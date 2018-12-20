@@ -17,6 +17,11 @@ const onSignIn = event => {
   console.log(data)
   api.signIn(data)
     .then(ui.signInSuccess)
+    .then(() => {
+      api.getCart()
+        .then(ui.getCartSuccess)
+        .catch(ui.getCartFailure)
+    })
     .catch(ui.signInFailure)
 }
 

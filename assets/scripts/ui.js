@@ -81,6 +81,15 @@ const signInFailure = error => {
   alert('Sign In unsuccessful')
 }
 
+const getCartSuccess = data => {
+  store.cart = data.cart
+  console.log('getCartSuccess', data)
+}
+
+const getCartFailure = error => {
+  console.log('getCartFailure', error)
+}
+
 const changePasswordSuccess = data => {
   $('#message').text('Password changed successfully')
   // $('#message').removeClass()
@@ -127,6 +136,8 @@ module.exports = {
   signUpFailure,
   signInSuccess,
   signInFailure,
+  getCartSuccess,
+  getCartFailure,
   changePasswordSuccess,
   changePasswordFailure,
   signOutSuccess,

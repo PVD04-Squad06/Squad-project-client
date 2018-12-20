@@ -61,11 +61,22 @@ const signOut = () => {
 //   })
 // }
 
+const getCart = () => {
+  return $.ajax({
+    url: config.apiUrl + '/cart',
+    method: 'GET',
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    }
+  })
+}
+
 module.exports = {
   signUp,
   signIn,
   changePassword,
-  signOut
+  signOut,
+  getCart
   // addToCart,
   // viewCart
 }
