@@ -145,7 +145,7 @@
       <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="shopping-cart-view">Your Nozema Shopping Cart <br> <i class="fas fa-shopping-bag fa-6x"></i></h5>
+            <h5 class="modal-title" id="shopping-cart-view">Your Nozema Shopping Cart <br> <i class="fas fa-shopping-bag fa-2x"></i></h5>
             <div>
               <form id='view-cart'>
                 Product: <br>
@@ -174,24 +174,21 @@
             </div>
           </div>
           <div class="modal-body">
-            <table id="shopping-cart-list">
-                <thead>
+            <table id="cart">
+                <thead class="table">
                   <th>Product</th>
                   <th>Price</th>
                 </thead>
-                <tbody class="table">
-                    <!-- <tr>
-                        <td id="product-name">1</td>
-                        <td id="product-price">2</td>
-                    </tr>
-                    <tr>
-                        <td>3</td>
-                        <td>4</td>
-                    </tr> -->
+                <tbody class="table" id="shopping-cart-list">
                 </tbody>
+                <tfoot>
+                  <th>Subtotal</th>
+                  <th id="subTotal">$</th>
+                </tfoot>
             </table>
           </div>
           <div class="modal-footer">
+            <button type="submit" class="btn btn-dark">Checkout</button>
             <button type="button" class="btn btn-dark" data-dismiss="modal">Close</button>
           </div>
         </div>
@@ -356,13 +353,12 @@
 <div class="alert alert-dark text-center" role="alert" id="message2"></div>
 
 
-
-<div id='productList'></div>
-
-
+<div id='productList'>
+</div>
 
 
-<div id='paymentContent'>
+
+<!-- <div id='paymentContent'>
 
 
 </div>
@@ -370,7 +366,7 @@
 
 <div id='cartContent'>
 
-</div>
+</div> -->
 
 
 
@@ -417,7 +413,7 @@
     <!-- Sign-up for Savings -->
     <form id="mbrsign">
   Join Now and Save! <input class="submit" placeholder="Email">
-    <button type="submit" class="btn btn-primary">Send!</button>
+    <button type="submit" class="btn btn-dark">Send!</button>
     <div class="text-center" id="mbrsign"></div>
   </form>
 

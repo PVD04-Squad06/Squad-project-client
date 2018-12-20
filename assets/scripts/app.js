@@ -26,6 +26,7 @@ $(() => {
   // $('#productList').on('submit', authEvents.onAddToCart)
   $('#womens').on('click', browseEvents.onGetWomensClothing)
   $('#mens').on('click', browseEvents.onGetMensClothing)
-  $('#productList').on('submit', '.add-to-cart', browseEvents.onAddToCart)
+  $('#productList').on('submit', '.add-to-cart-women', browseEvents.onAddToCartWomen)
+  $('#productList').on('submit', '.add-to-cart-men', browseEvents.onAddToCartMen)
   // $('#productList').on('click', '.checkout', browseEvents.onCheckout)
 })
