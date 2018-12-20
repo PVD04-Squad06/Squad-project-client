@@ -18,7 +18,31 @@ const getAProductFailure = error => {
 }
 
 const addToCartSuccess = data => {
-  console.log('addToCartSuccess', data)
+//   console.log('addToCartSuccess', data)
+//   $('#shopping-cart').html('')
+//   let content = '<div class="row">'
+//   const dataArray = data.products
+//   console.log(store.product)
+//   dataArray.forEach(function (product) {
+//     // const addToCart = $('.')
+//     content += `<div class="col-sm-4">
+//       <div class="card" id="imageDiv">
+//         <div class="card-body" id="imageDivalso">
+//           <h5 class="card-title"></h5>
+//           <form class="add-to-cart" id="${product._id}">
+//             <p class="card-text">${product.name}</p>
+//             <p class="card-text">$${product.price}</p>
+//           <form>
+//         </div>
+//       </div>
+//     </div>`
+//     // <button class="btn btn-dark add-to-cart" id="${product._id}">Add to cart</button>
+//     // store.product._id = product
+//     // console.log(product)
+//     // console.log(product.image)
+//   })
+//   content += '</div>'
+//   $('#shopping-cart').html(content)
 }
 
 const addToCartFailure = error => {
@@ -28,6 +52,7 @@ const addToCartFailure = error => {
 const getWomensClothingSuccess = function (data) {
   $('#productList').html('')
   let content = '<div class="row">'
+  store.womensProduct = data.products
   const dataArray = data.products
   dataArray.forEach(function (product) {
     const imgurUrl = product.image
@@ -37,11 +62,15 @@ const getWomensClothingSuccess = function (data) {
         <div class="card-body" id="imageDivalso">
           <h5 class="card-title"></h5>
           <img class="card-img" src='${imgurUrl}.jpg' alt="Card image">
-          <p class="card-text"></p>
-          <button class="btn btn-dark add-to-cart" id="${product._id}">Add to cart</button>
+          <form class="add-to-cart" id="${product._id}">
+            <p class="card-text">${product.name}</p>
+            <p class="card-text">$${product.price}</p>
+            <button class="btn btn-dark add-to-cart">Add to cart</button>
+            </form>
         </div>
       </div>
     </div>`
+    // <button class="btn btn-dark add-to-cart" id="${product._id}">Add to cart</button>
     // store.product._id = product
     // console.log(product)
     // console.log(product.image)

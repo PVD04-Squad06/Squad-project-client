@@ -1,6 +1,8 @@
 'use strict'
+// const getFormFields = require('../get-form-fields.js')
 const api = require('./api.js')
 const ui = require('./ui.js')
+const store = require('../store.js')
 
 // Only needed to test front end/back end connection.
 // const onGetAllProducts = event => {
@@ -21,13 +23,35 @@ const onGetAProduct = event => {
 
 const onAddToCart = event => {
   event.preventDefault()
-  console.log('inside onAddToCart')
-  // console.log(event.target.id)
-  const data = $(event.target).attr('id')
-  api.addToCart(data)
-    .then(ui.addToCartSuccess)
-    .catch(ui.addToCartFailure)
+  const productIdToBuy = event.target.id
+  // $('#shopping-cart').html('')
+  const dataArray = store.womensProduct
+  console.log(store.womensProduct)
+  let content = '<div class="row">'
+  dataArray.forEach(function (product) {
+    // const addToCart = $('.')
+    if (productIdToBuy === product._id) {
+      content += `<div class="col-sm-4">
+        <div class="card-body" id="imageDivalso">
+          <p class="card-text">${product.name}</p>
+          <p class="card-text">$${product.price}</p>
+        <div>
+      </div>`
+    }
+    // <button class="btn btn-dark add-to-cart" id="${product._id}">Add to cart</button>
+    // store.product._id = product
+    // console.log(product)
+    // console.log(product.image)
+  })
+  content += '</div>'
+  $('#shopping-cart').html(content)
+  console.log(content)
 }
+// console.log(event.target.id)
+// const data = $(event.target).attr('id')
+// api.addToCart()
+//   .then(ui.addToCartSuccess)
+//   .catch(ui.addToCartFailure)
 
 const onCheckout = event => {
   event.preventDefault()
