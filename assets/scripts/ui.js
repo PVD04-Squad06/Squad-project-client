@@ -67,6 +67,7 @@ const signInSuccess = data => {
   $('#sidebar').show()
   $('#navbarTwo').show()
   $('#navbarOne').hide()
+  $('#modal-three').hide()
   $('#navbarOne').modal('hide')
   $('body').removeClass('modal-open')
   $('.modal-backdrop').remove()
