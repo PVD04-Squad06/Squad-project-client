@@ -148,16 +148,12 @@
             <h5 class="modal-title" id="shopping-cart-view">Your Nozema Shopping Cart <br> <i class="fas fa-shopping-bag fa-2x"></i></h5>
             <div>
               <form id='view-cart'>
-                Product: <br>
-                Quantity: <br>
                 Shipping: FREE! <br>
-                Sub-Total: $0 <br>
                 <form id='check-out'>
                   <form action="your-server-side-code" method="POST">
                     <script
                     src="https://checkout.stripe.com/checkout.js" class="stripe-button"
                     data-key="pk_test_TYooMQauvdEDq54NiTphI7jx"
-                    data-amount="999"
                     data-name="Stripe.com"
                     data-description="Thank you for shopping at Nozema!"
                     data-image="https://stripe.com/img/documentation/checkout/marketplace.png"
@@ -183,12 +179,11 @@
                 </tbody>
                 <tfoot>
                   <th>Subtotal</th>
-                  <th id="subTotal">$</th>
+                  <th id="subTotal"></th>
                 </tfoot>
             </table>
           </div>
           <div class="modal-footer">
-            <button type="submit" class="btn btn-dark">Checkout</button>
             <button type="button" class="btn btn-dark" data-dismiss="modal">Close</button>
           </div>
         </div>
