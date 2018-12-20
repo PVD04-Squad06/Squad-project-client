@@ -35,6 +35,9 @@
     </head>
     <body>
 
+      <!--UI messages-->
+      <div class="alert alert-dark text-center" role="alert" id="message2"></div>
+
       <!--Navbar-->
       <nav class="navbar navbar-expand-lg navbar-light bg-light" id='navbarOne'>
         <a class="navbar-brand" href="#">Nozema</a>
@@ -60,7 +63,7 @@
                 <input type='text' name='credentials[email]' placeholder='email'>
                 <input type='password' name='credentials[password]' placeholder="password">
                 <input type='password' name='credentials[password_confirmation]' placeholder="Confirm password">
-                <input type="submit" value="Sign Up!">
+                <input type="submit" class="btn btn-dark" value="Sign Up!">
                 <br>
                 <p id="message1"></p>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -72,7 +75,7 @@
           <div class="modal-body">
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-dark" data-dismiss="modal">Close</button>
           </div>
         </div>
       </div>
@@ -97,12 +100,13 @@
                 <div class="dropdown-divider"></div>
                 <input type='password' name='credentials[password]' placeholder="password">
                 <div class="dropdown-divider"></div>
-                <input type="submit" value="Sign In!">
+                <input type="submit" class="btn btn-dark" value="Sign In!">
               </form>
+              <p id="message3"></p>
             </div>
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-dark" data-dismiss="modal">Close</button>
           </div>
         </div>
       </div>
@@ -246,8 +250,8 @@
             </form>
             </div>
             <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-              <button type="button" class="btn btn-primary">Save changes</button>
+              <button type="button" class="btn btn-dark" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-dark">Save changes</button>
             </div>
           </div>
         </div>
@@ -264,8 +268,8 @@
 </div>
 </nav>
 
-
 <!--3rd navbar-->
+
 <nav class="navbar navbar-dark bg-dark">
   <span class="nav-item">
       <form>
@@ -345,13 +349,21 @@
 </div>
 
 
-<div class="alert alert-dark text-center" role="alert" id="message2"></div>
-
-
 <div id='productList'>
 </div>
 
-
+<div class="modal fade" id="ui" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-body">
+        <p id="userFeedback"></p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
 
 <!-- <div id='paymentContent'>
 
