@@ -29,18 +29,18 @@ const getAProduct = event => {
 
 const addToCart = data => {
   console.log('addToCart', data)
-  store.cart.items = store.cart.items.concat(data)
-  // define data with button's id
-  // const data =
-  // send a patch to carts with product info
-  return $.ajax({
-    url: config.apiUrl + '/cart',
-    method: 'PATCH',
-    headers: {
-      Authorization: 'Token token=' + store.user.token
-    },
-    data: ({cart: {items: store.cart.items}})
-  })
+//   store.cart.items = store.cart.items.concat(data)
+//   // define data with button's id
+//   // const data =
+//   // send a patch to carts with product info
+//   return $.ajax({
+//     url: config.apiUrl + '/cart',
+//     method: 'PATCH',
+//     headers: {
+//       Authorization: 'Token token=' + store.user.token
+//     },
+//     data: ({cart: {items: store.cart.items}})
+//   })
 }
 
 // using stripe documentation to checkout
