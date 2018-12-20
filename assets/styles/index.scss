@@ -45,9 +45,15 @@
   padding: 0em;
 }
 
-.carousel {
-  margin: auto;
+h1 {
+  font-variant: small-caps;
+  position: sticky;
 }
+
+// to denter vid carousel
+// .carousel {
+//   margin: auto;
+// }
 
 .banner__video {
   align-content: center;
