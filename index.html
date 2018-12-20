@@ -111,25 +111,25 @@
 
 <!--Navbar2-->
 <nav class="navbar navbar-expand-lg navbar-light bg-light" id='navbarTwo'>
-  <a class="navbar-brand" href="#">eComerce</a>
+  <!-- <a class="navbar-brand" href="#">eComerce</a> -->
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
   <!--navbarcontent-->
 <div class="collapse navbar-collapse align-baseline" id="navbarSupportedContent">
   <ul class="navbar-nav mr-auto">
-    <li class="nav-item active">
+    <!-- <li class="nav-item active">
       <i class="fas fa-home"></i>
       <button type='submit' id='home' class="btn btn-light">Home <span class="sr-only">(current)</span></a>
-    </li>
-    <li class="nav-item">
+    </li> -->
+    <!-- <li class="nav-item">
       <form id='PaymentInfo'>
         <i class="far fa-credit-card"></i>
         <button type='submit' class="btn btn-light">PaymentInfo</button>
 
 
       </form>
-    </li>
+    </li> -->
     <li class="nav-item">
       <!-- <form id='shopping-cart'> -->
       <div id="shopping-cart">
@@ -152,15 +152,31 @@
                 Quantity: <br>
                 Shipping: FREE! <br>
                 Sub-Total: $0 <br>
-                <button type="submit" class="btn btn-success">Checkout</button>
+                <button type="submit" class="btn btn-dark">Checkout</button>
 
               </form>
             </div>
           </div>
           <div class="modal-body">
+            <table>
+                <thead>
+                  <th>Product</th>
+                  <th>Price</th>
+                </thead>
+                <tbody class="table">
+                    <tr id="shopping-cart-list">
+                        <td id="product-name">1</td>
+                        <td id="product-price">2</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>5</td>
+                    </tr>
+                </tbody>
+            </table>
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-dark" data-dismiss="modal">Close</button>
           </div>
         </div>
       </div>
@@ -289,7 +305,7 @@
           </div>
         </div>
       </div>
-</li>
+
 <!--signOut-->
   <li class="nav-item">
     <form id='sign-out'>
@@ -297,16 +313,6 @@
     </form>
   </li>
 
-<li>
-  <!--searchbar-->
-  <form class="form-inline my-2 my-lg-0">
-    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-    <button class="btn btn-outline-dark" type="submit">Search</button>
-
-  </div>
-  </form>
-
-</li>
 </ul>
 </div>
 </nav>
@@ -350,7 +356,7 @@
       <h1 class="display-4">Beautiful Dresses</h1>
       <p class="lead">The hottest style to put all eyes on you.</p>
     </div>
-    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel" data-interval="7000">
+    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
       <div class="carousel-inner">
         <div class="carousel-item active">
           <video autoplay loop muted class="banner__video">
