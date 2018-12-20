@@ -1,13 +1,11 @@
 @import '~bootstrap/scss/bootstrap';
 @import url('https://fonts.googleapis.com/css?family=Mountains+of+Christmas');
 
-
-/*.card-img:hover {
+/* .card-img:hover {
   -ms-transform: scale(1.5); /* IE 9
   -webkit-transform: scale(1.5); /* Safari 3-8
   transform: scale(1.5);
 } */
-
 #modal-four {
   overflow: auto;
 }
@@ -15,7 +13,6 @@
 .footer {
   border-style: solid;
 }
-
 
 .div-footer {
   background-color: rgba(0, 0, 0, 0.4);
@@ -39,12 +36,11 @@
   margin: auto;
 }
 
-.shopping-cart-list {
-  background-color: pink;
-  width: 20px;
-}
-.shopTable {
-  width: inherit;
+.table {
+  // border: 1px solid black;
+  display: block;
+  text-align: center;
+  width: 100%;
 }
 
 #jumbo {
@@ -54,14 +50,13 @@
   background-repeat: no-repeat;
   display: flex;
   margin: auto;
-  padding: 0em;
+  padding: 0;
 }
 
 h1 {
   font-variant: small-caps;
   position: sticky;
 }
-
 // to denter vid carousel
 // .carousel {
 //   margin: auto;
@@ -82,27 +77,27 @@ h1 {
 }
 
 .carousel-fade .carousel-item {
- opacity: 0;
- transition-duration: .6s;
- transition-property: opacity;
+  opacity: 0;
+  transition-duration: 0.6s;
+  transition-property: opacity;
 }
 
-.carousel-fade  .carousel-item.active,
-.carousel-fade  .carousel-item-next.carousel-item-left,
-.carousel-fade  .carousel-item-prev.carousel-item-right {
+.carousel-fade .carousel-item-next.carousel-item-left,
+.carousel-fade .carousel-item-prev.carousel-item-right,
+.carousel-fade .carousel-item.active {
   opacity: 1;
 }
 
 .carousel-fade .active.carousel-item-left,
-.carousel-fade  .active.carousel-item-right {
- opacity: 0;
+.carousel-fade .active.carousel-item-right {
+  opacity: 0;
 }
 
-.carousel-fade  .carousel-item-next,
-.carousel-fade .carousel-item-prev,
-.carousel-fade .carousel-item.active,
 .carousel-fade .active.carousel-item-left,
-.carousel-fade  .active.carousel-item-prev {
- transform: translateX(0);
- transform: translate3d(0, 0, 0);
+.carousel-fade .active.carousel-item-prev,
+.carousel-fade .carousel-item-next,
+.carousel-fade .carousel-item-prev,
+.carousel-fade .carousel-item.active {
+  transform: translateX(0);
+  transform: translate3d(0, 0, 0);
 }

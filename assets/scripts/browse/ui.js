@@ -63,10 +63,10 @@ const getWomensClothingSuccess = function (data) {
         <div class="card-body" id="imageDivalso">
           <h5 class="card-title"></h5>
           <img class="card-img" src='${imgurUrl}.jpg' alt="Card image">
-          <form class="add-to-cart" id="${product._id}">
+          <form class="add-to-cart-women" id="${product._id}">
             <p class="card-text">${product.name}</p>
             <p class="card-text">$${product.price}</p>
-            <button class="btn btn-dark add-to-cart">Add to cart</button>
+            <button class="btn btn-dark add-to-cart-women">Add to cart</button>
             </form>
         </div>
       </div>
@@ -82,6 +82,7 @@ const getWomensClothingSuccess = function (data) {
 
 const getMensClothingSuccess = function (data) {
   $('#productList').html('')
+  $('#jumbo').fadeOut('slow')
   let content = '<div class="row">'
   store.mensProduct = data.products
   const dataArray = data.products
@@ -92,10 +93,10 @@ const getMensClothingSuccess = function (data) {
         <div class="card-body">
           <h5 class="card-title"></h5>
           <img class="card-img" src='${imgurUrl}.jpg' alt="Card image">
-          <form class="add-to-cart" id="${product._id}">
+          <form class="add-to-cart-men" id="${product._id}">
             <p class="card-text">${product.name}</p>
             <p class="card-text">$${product.price}</p>
-            <button class="btn btn-dark add-to-cart">Add to cart</button>
+            <button class="btn btn-dark add-to-cart-men">Add to cart</button>
             </form>
         </div>
       </div>
