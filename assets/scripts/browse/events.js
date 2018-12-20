@@ -1,5 +1,5 @@
 'use strict'
-const getFormFields = require('../get-form-fields.js')
+// const getFormFields = require('../get-form-fields.js')
 const api = require('./api.js')
 const ui = require('./ui.js')
 const store = require('../store.js')
@@ -48,10 +48,10 @@ const onAddToCart = event => {
   console.log(content)
 }
 // console.log(event.target.id)
-  // const data = $(event.target).attr('id')
-  // api.addToCart()
-  //   .then(ui.addToCartSuccess)
-  //   .catch(ui.addToCartFailure)
+// const data = $(event.target).attr('id')
+// api.addToCart()
+//   .then(ui.addToCartSuccess)
+//   .catch(ui.addToCartFailure)
 
 const onCheckout = event => {
   event.preventDefault()
