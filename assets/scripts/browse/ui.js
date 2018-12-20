@@ -37,11 +37,12 @@ const getWomensClothingSuccess = function (data) {
         <div class="card-body" id="imageDivalso">
           <h5 class="card-title"></h5>
           <img class="card-img" src='${imgurUrl}.jpg' alt="Card image">
-          <p class="card-text"></p>
+          <p class="card-text">$${product.price}</p>
           <button class="btn btn-dark add-to-cart" id="${product._id}">Add to cart</button>
         </div>
       </div>
     </div>`
+    // <button class="btn btn-dark add-to-cart" id="${product._id}">Add to cart</button>
     // store.product._id = product
     // console.log(product)
     // console.log(product.image)
