@@ -28,7 +28,7 @@ const onAddToCartWomen = event => {
     // console.log(num)
     sum += parseInt(num)
   })
-  console.log(sum)
+  // console.log(sum)
   $('#subTotal').html(`$${sum}`)
 }
 
