@@ -46,14 +46,14 @@ const signUpSuccess = data => {
   $('#navbarOne').modal('hide')
   $('body').removeClass('modal-open')
   $('.modal-backdrop').remove()
-  console.log('signUpSuccess ran. Data is :', data)
+  // console.log('signUpSuccess ran. Data is :', data)
 }
 
 const signUpFailure = error => {
   $('#message1').text('Sign-up unsuccessful')
   $('#message').removeClass()
   $('#message').addClass('failure')
-  console.error('signUpFailure ran. Error is :', error)
+  // console.error('signUpFailure ran. Error is :', error)
   // alert('Sign Up unsuccessful')
 }
 
@@ -70,7 +70,7 @@ const signInSuccess = data => {
   $('#navbarOne').modal('hide')
   $('body').removeClass('modal-open')
   $('.modal-backdrop').remove()
-  console.log('signInSuccess ran. Data is :', data)
+  // console.log('signInSuccess ran. Data is :', data)
 }
 
 const signInFailure = error => {
@@ -78,12 +78,12 @@ const signInFailure = error => {
   $('#message').removeClass()
   $('#message').addClass('failure')
   console.error('signInFailure ran. Error is :', error)
-  alert('Sign In unsuccessful')
+  // alert('Sign In unsuccessful')
 }
 
 const getCartSuccess = data => {
   store.cart = data.cart
-  console.log('getCartSuccess', data)
+  // console.log('getCartSuccess', data)
 }
 
 const getCartFailure = error => {

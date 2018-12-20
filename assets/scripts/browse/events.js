@@ -4,14 +4,42 @@ const api = require('./api.js')
 const ui = require('./ui.js')
 const store = require('../store.js')
 
-const onAddToCart = event => {
+const onAddToCartWomen = event => {
   event.preventDefault()
   const productIdToBuy = event.target.id
   // $('#shopping-cart').html('')
-  const dataArray = store.womensProduct
+  const dataArrayWomen = store.womensProduct
   // console.log(store.womensProduct)
-  let content = '<table>'
-  dataArray.forEach(function (product) {
+  let content = '<table class="table">'
+  dataArrayWomen.forEach(function (product) {
+    // const addToCart = $('.')
+    if (productIdToBuy === product._id) {
+      content += `<tr>
+          <td class="productName">${product.name}</td>
+          <td class="productPrice">$${product.price}</td>
+      </tr>`
+    }
+  })
+  content += '</table>'
+  $('#shopping-cart-list').append(content)
+  let sum = 0
+  $('#cart .productPrice').each(function () {
+    const num = this.innerHTML.slice(1)
+    // console.log(num)
+    sum += parseInt(num)
+  })
+  console.log(sum)
+  $('#subTotal').html(`$${sum}`)
+}
+
+const onAddToCartMen = event => {
+  event.preventDefault()
+  const productIdToBuy = event.target.id
+  // $('#shopping-cart').html('')
+  const dataArrayMen = store.mensProduct
+  // console.log(store.womensProduct)
+  let content = '<table class="table">'
+  dataArrayMen.forEach(function (product) {
     // const addToCart = $('.')
     if (productIdToBuy === product._id) {
       content += `<tr>
@@ -19,20 +47,11 @@ const onAddToCart = event => {
           <td class="shopTable">$${product.price}</td>
       </tr>`
     }
-    // <button class="btn btn-dark add-to-cart" id="${product._id}">Add to cart</button>
-    // store.product._id = product
-    // console.log(product)
-    // console.log(product.image)
   })
   content += '</table>'
   $('#shopping-cart-list').append(content)
   console.log(content)
 }
-// console.log(event.target.id)
-// const data = $(event.target).attr('id')
-// api.addToCart()
-//   .then(ui.addToCartSuccess)
-//   .catch(ui.addToCartFailure)
 
 const onCheckout = event => {
   event.preventDefault()
@@ -67,17 +86,10 @@ const onGetMensClothing = event => {
 //     .catch(ui.getAllProductsFailure)
 // }
 
-// const onGetAProduct = event => {
-//   event.preventDefault()
-//   console.log(event.target)
-//   api.getAProduct()
-//     .then(ui.getAProductSuccess)
-//     .catch(ui.getAProductFailure)
-// }
-
 module.exports = {
-  onAddToCart,
   onGetWomensClothing,
   onGetMensClothing,
+  onAddToCartWomen,
+  onAddToCartMen,
   onCheckout
 }
