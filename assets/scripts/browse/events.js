@@ -4,6 +4,17 @@ const api = require('./api.js')
 const ui = require('./ui.js')
 const store = require('../store.js')
 
+const calcSubTotal = () => {
+  let sum = 0
+  $('#cart .productPrice').each(function () {
+    const num = this.innerHTML.slice(1)
+    console.log(num)
+    sum += parseInt(num)
+  })
+  console.log(sum)
+  $('#subTotal').html(`$${sum}`)
+}
+
 const onAddToCartWomen = event => {
   event.preventDefault()
   const productIdToBuy = event.target.id
@@ -22,14 +33,7 @@ const onAddToCartWomen = event => {
   })
   content += '</table>'
   $('#shopping-cart-list').append(content)
-  let sum = 0
-  $('#cart .productPrice').each(function () {
-    const num = this.innerHTML.slice(1)
-    // console.log(num)
-    sum += parseInt(num)
-  })
-  // console.log(sum)
-  $('#subTotal').html(`$${sum}`)
+  calcSubTotal()
 }
 
 const onAddToCartMen = event => {
@@ -43,14 +47,15 @@ const onAddToCartMen = event => {
     // const addToCart = $('.')
     if (productIdToBuy === product._id) {
       content += `<tr>
-          <td class="shopTable">${product.name}</td>
-          <td class="shopTable">$${product.price}</td>
+          <td class="productName">${product.name}</td>
+          <td class="productPrice">$${product.price}</td>
       </tr>`
     }
   })
   content += '</table>'
   $('#shopping-cart-list').append(content)
-  console.log(content)
+  // console.log(content)
+  calcSubTotal()
 }
 
 const onCheckout = event => {
