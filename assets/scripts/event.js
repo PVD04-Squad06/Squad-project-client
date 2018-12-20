@@ -17,6 +17,11 @@ const onSignIn = event => {
   console.log(data)
   api.signIn(data)
     .then(ui.signInSuccess)
+    .then(() => {
+      api.getCart()
+        .then(ui.getCartSuccess)
+        .catch(ui.getCartFailure)
+    })
     .catch(ui.signInFailure)
 }
 
@@ -36,23 +41,23 @@ const onSignOut = event => {
     .catch(ui.signOutFailure)
 }
 
-const onAddToCart = event => {
-  event.preventDefault()
-  const data = getFormFields(event.target)
-  console.log(data)
-  api.addToCart(data)
-    .then(ui.addToCartSuccess)
-    .catch(ui.addToCartFailure)
-}
-
-const onViewCart = event => {
-  event.preventDefault()
-  const data = getFormFields(event.target)
-  console.log(data)
-  api.viewCart(data)
-    .then(ui.viewCartSuccess)
-    .catch(ui.viewCartFailure)
-}
+// const onAddToCart = event => {
+//   event.preventDefault()
+//   const data = getFormFields(event.target)
+//   console.log(data)
+//   api.addToCart(data)
+//     .then(ui.addToCartSuccess)
+//     .catch(ui.addToCartFailure)
+// }
+//
+// const onViewCart = event => {
+//   event.preventDefault()
+//   const data = getFormFields(event.target)
+//   console.log(data)
+//   api.viewCart(data)
+//     .then(ui.viewCartSuccess)
+//     .catch(ui.viewCartFailure)
+// }
 
 const onMbrSign = event => {
   event.preventDefault()
@@ -66,8 +71,8 @@ module.exports = {
   onSignIn,
   onChangePassword,
   onSignOut,
-  onAddToCart,
-  onViewCart,
+  // onAddToCart,
+  // onViewCart,
   onMbrSign
 
 }

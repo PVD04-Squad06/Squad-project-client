@@ -27,18 +27,20 @@ const getAProduct = event => {
   })
 }
 
-const addToCart = event => {
-  console.log(event.target)
-  const data = event.target
-  // send a patch to carts with product info
-  return $.ajax({
-    url: config.apiUrl + '/carts/:id',
-    method: 'POST',
-    headers: {
-      Authorization: 'Token token=' + store.user.token
-    },
-    data // send product price
-  })
+const addToCart = data => {
+  console.log('addToCart', data)
+//   store.cart.items = store.cart.items.concat(data)
+//   // define data with button's id
+//   // const data =
+//   // send a patch to carts with product info
+//   return $.ajax({
+//     url: config.apiUrl + '/cart',
+//     method: 'PATCH',
+//     headers: {
+//       Authorization: 'Token token=' + store.user.token
+//     },
+//     data: ({cart: {items: store.cart.items}})
+//   })
 }
 
 // using stripe documentation to checkout
@@ -46,9 +48,24 @@ const addToCart = event => {
 //   console.log(event.target)
 // }
 
+const womensClothingApi = function () {
+  return $.ajax({
+    url: config.apiUrl + '/products/womens-clothing',
+    method: 'GET'
+  })
+}
+
+const mensClothingApi = function () {
+  return $.ajax({
+    url: config.apiUrl + '/products/mens-clothing',
+    method: 'GET'
+  })
+}
 module.exports = {
   getAllProducts,
   getAProduct,
-  addToCart
+  addToCart,
+  womensClothingApi,
+  mensClothingApi
   // checkout
 }

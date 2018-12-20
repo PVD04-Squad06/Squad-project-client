@@ -8,6 +8,10 @@
   transform: scale(1.5);
 } */
 
+#modal-four {
+  overflow: auto;
+}
+
 .footer {
   border-style: solid;
 }
@@ -26,22 +30,79 @@
   width: 300px;
 }
 
-.ft-message {
-  color: white;
-  font-family: 'Mountains of Christmas', cursive;
-}
-
 .savings-msg {
   color: white;
 }
 
-#jumbo {
+.nav-item {
+  align-content: center;
+  margin: auto;
+}
+
+.shopping-cart-list {
   background-color: pink;
-  background-image: url('../public/image/redDress.jpg');
+  width: 20px;
+}
+.shopTable {
+  width: inherit;
+}
+
+#jumbo {
+  align-items: center;
+  background-color: #edeaea;
+  // background-image: url('../public/image/redDress.jpg');
   background-repeat: no-repeat;
-  background-position: top right;
+  display: flex;
+  margin: auto;
+  padding: 0em;
+}
+
+h1 {
+  font-variant: small-caps;
+  position: sticky;
+}
+
+// to denter vid carousel
+// .carousel {
+//   margin: auto;
+// }
+
+.banner__video {
+  align-content: center;
+  display: flex;
+  justify-content: center;
+}
+
+.card-body {
+  text-align: center;
 }
 
 #viewDress {
   float: center;
+}
+
+.carousel-fade .carousel-item {
+ opacity: 0;
+ transition-duration: .6s;
+ transition-property: opacity;
+}
+
+.carousel-fade  .carousel-item.active,
+.carousel-fade  .carousel-item-next.carousel-item-left,
+.carousel-fade  .carousel-item-prev.carousel-item-right {
+  opacity: 1;
+}
+
+.carousel-fade .active.carousel-item-left,
+.carousel-fade  .active.carousel-item-right {
+ opacity: 0;
+}
+
+.carousel-fade  .carousel-item-next,
+.carousel-fade .carousel-item-prev,
+.carousel-fade .carousel-item.active,
+.carousel-fade .active.carousel-item-left,
+.carousel-fade  .active.carousel-item-prev {
+ transform: translateX(0);
+ transform: translate3d(0, 0, 0);
 }

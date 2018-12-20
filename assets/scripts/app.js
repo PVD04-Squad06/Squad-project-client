@@ -12,20 +12,20 @@ $(() => {
   // your JS code goes here
   $('#sign-up').on('submit', authEvents.onSignUp)
   $('#sign-in').on('submit', authEvents.onSignIn)
-  $('#sign-out').on('submit', authEvents.onSignOut)
+  $('#sign-out').on('click', authEvents.onSignOut)
   $('#change-password').on('submit', authEvents.onChangePassword)
+  $('#mbrsign').on('submit', authEvents.onMbrSign)
   // browse event listener
-  // See all products (index products resource)
-  $('#seeProducts').on('click', browseEvents.onGetAllProducts)
+  // $('#seeProducts').on('click', browseEvents.onGetAllProducts)
   // See specific product by clicking on product square (get products with id)
   // $('#productId').on('submit', browseEvents.onGetAProduct)
-  // cart event listeners
-  // add to cart event listener
-  $('#add-to-cart').on('submit', browseEvents.onAddToCart)
   // Stripe checkout event listener
   // $('#checkout').on('submit', browseEvents.onCheckout)
-  $('#productList').on('submit', authEvents.onAddToCart)
-  $('#view-cart').on('submit', authEvents.onViewCart)
-  $('#productList').on('submit', authEvents.onAddToCart)
-  $('#mbrsign').on('submit', authEvents.onMbrSign)
+  // $('#productList').on('submit', authEvents.onAddToCart)
+  // $('#view-cart').on('submit', authEvents.onViewCart)
+  // $('#productList').on('submit', authEvents.onAddToCart)
+  $('#womens').on('click', browseEvents.onGetWomensClothing)
+  $('#mens').on('click', browseEvents.onGetMensClothing)
+  $('#productList').on('submit', '.add-to-cart', browseEvents.onAddToCart)
+  // $('#productList').on('click', '.checkout', browseEvents.onCheckout)
 })
