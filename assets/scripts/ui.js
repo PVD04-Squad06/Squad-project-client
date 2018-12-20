@@ -35,8 +35,9 @@ $('#exampleModal').on('show.bs.modal', function (event) {
 
 const signUpSuccess = data => {
   store.user = data.user
+  $('#message2').fadeIn(500)
   $('#message2').text('Signed up successfully, you are logged in')
-  $('#message2').fadeOut(5000)
+  $('#message2').fadeOut(3000)
   $('#message').removeClass()
   $('#message').addClass('success')
   $('#sign-up').trigger('reset')
@@ -50,7 +51,7 @@ const signUpSuccess = data => {
 }
 
 const signUpFailure = error => {
-  $('#message1').text('Sign-up unsuccessful')
+  $('#message1').text('Sorry, sign-up was unsuccessful')
   $('#message').removeClass()
   $('#message').addClass('failure')
   // console.error('signUpFailure ran. Error is :', error)
@@ -59,14 +60,16 @@ const signUpFailure = error => {
 
 const signInSuccess = data => {
   store.user = data.user
+  $('#message2').fadeIn(500)
   $('#message2').text('Signed in successfully')
-  $('#message2').fadeOut(5000)
+  $('#message2').fadeOut(3000)
   $('#message').removeClass()
   $('#message').addClass('success')
   $('#sign-in').trigger('reset')
   $('#sidebar').show()
   $('#navbarTwo').show()
   $('#navbarOne').hide()
+  $('#modal-three').hide()
   $('#navbarOne').modal('hide')
   $('body').removeClass('modal-open')
   $('.modal-backdrop').remove()
@@ -86,8 +89,8 @@ const getCartSuccess = data => {
   // console.log('getCartSuccess', data)
 }
 
-const getCartFailure = error => {
-  console.log('getCartFailure', error)
+const getCartFailure = () => {
+  // console.log('getCartFailure', error)
 }
 
 const changePasswordSuccess = data => {
@@ -95,18 +98,19 @@ const changePasswordSuccess = data => {
   // $('#message').removeClass()
   // $('#message').addClass('success')
   $('#change-password').trigger('reset')
-  console.log('changePasswordSuccess ran. Data is :', data)
+  // console.log('changePasswordSuccess ran. Data is :', data)
 }
 
 const changePasswordFailure = error => {
-  $('#message').text('Error on password change')
+  $('#message').text('Error on password change', error)
   // $('#message').removeClass()
   // $('#message').addClass('failure')
-  console.error('changePasswordFailure ran. Error is :', error)
-  alert('Password Change unsuccessful')
+  // console.error('changePasswordFailure ran. Error is :', error)
+  // alert('Password Change unsuccessful')
 }
 
 const signOutSuccess = data => {
+  $('#message2').fadeIn(500)
   $('#message2').text('Signed out successfully')
   $('#message2').fadeOut(5000)
   store.user = null
@@ -128,7 +132,7 @@ const signOutFailure = error => {
   $('#message2').fadeOut(5000)
   // $('#message').removeClass()
   // $('#message').addClass('failure')
-  console.error('signOutFailure ran. Error is :', error)
+  // console.error('signOutFailure ran. Error is :', error)
 }
 
 module.exports = {

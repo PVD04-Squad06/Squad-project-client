@@ -29,33 +29,55 @@ const onAddToCartWomen = event => {
           <td class="productName">${product.name}</td>
           <td class="productPrice">$${product.price}</td>
       </tr>`
+      $('#message2').fadeIn(500)
+      $('#message2').text(`Thank you for adding ${product.name} to your cart`)
+      $('#message2').fadeOut(3000)
     }
   })
   content += '</table>'
   $('#shopping-cart-list').append(content)
+<<<<<<< HEAD
   calcSubTotal()
+=======
+  let sum = $('#subTotal').html()
+  sum = parseInt(sum.slice(1))
+  // console.log(sum)
+  $('#cart .productPrice').each(function () {
+    const num = this.innerHTML.slice(1)
+    const subTotal = parseInt(sum) + parseInt(num)
+    // console.log(subTotal)
+    // console.log(sum)
+    $('#subTotal').html(`$${subTotal}`)
+  })
+>>>>>>> Stylistic changes
 }
 
 const onAddToCartMen = event => {
   event.preventDefault()
   const productIdToBuy = event.target.id
-  // $('#shopping-cart').html('')
   const dataArrayMen = store.mensProduct
-  // console.log(store.womensProduct)
   let content = '<table class="table">'
   dataArrayMen.forEach(function (product) {
-    // const addToCart = $('.')
     if (productIdToBuy === product._id) {
       content += `<tr>
           <td class="productName">${product.name}</td>
           <td class="productPrice">$${product.price}</td>
       </tr>`
+      $('#message2').fadeIn(500)
+      $('#message2').text(`Thank you for adding ${product.name} to your cart`)
+      $('#message2').fadeOut(3000)
     }
   })
   content += '</table>'
   $('#shopping-cart-list').append(content)
-  // console.log(content)
-  calcSubTotal()
+  let sum = $('#subTotal').html()
+  sum = parseInt(sum.slice(1))
+  // console.log(sum)
+  $('#cart .productPrice').each(function () {
+    const num = this.innerHTML.slice(1)
+    const subTotal = parseInt(sum) + parseInt(num)
+    $('#subTotal').html(`$${subTotal}`)
+  })
 }
 
 const onCheckout = event => {
