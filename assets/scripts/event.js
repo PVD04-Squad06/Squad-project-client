@@ -41,7 +41,6 @@ const onSignOut = event => {
     .catch(ui.signOutFailure)
 }
 
-<<<<<<< HEAD
 // const onAddToCart = event => {
 //   event.preventDefault()
 //   const data = getFormFields(event.target)
@@ -60,8 +59,6 @@ const onSignOut = event => {
 //     .catch(ui.viewCartFailure)
 // }
 
-=======
->>>>>>> working footer must space out icons and add links
 const onMbrSign = event => {
   event.preventDefault()
   console.log('mrbsign clicked')
@@ -74,12 +71,7 @@ module.exports = {
   onSignIn,
   onChangePassword,
   onSignOut,
-<<<<<<< HEAD
   // onAddToCart,
   // onViewCart,
   onMbrSign
-
-=======
-  onMbrSign
->>>>>>> working footer must space out icons and add links
 }

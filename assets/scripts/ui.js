@@ -71,7 +71,6 @@ const signInSuccess = data => {
   $('#navbarOne').modal('hide')
   $('body').removeClass('modal-open')
   $('.modal-backdrop').remove()
-  console.log('signInSuccess ran. Data is :', data)
 }
 
 const signInFailure = error => {
@@ -108,6 +107,7 @@ const changePasswordFailure = error => {
 }
 
 const signOutSuccess = data => {
+  $('#message2').fadeIn(500)
   $('#message2').text('Signed Out Sucessfully')
   $('#message2').fadeOut(4500)
   store.user = null
