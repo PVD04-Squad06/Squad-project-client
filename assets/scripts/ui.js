@@ -107,6 +107,7 @@ const changePasswordFailure = error => {
 }
 
 const signOutSuccess = data => {
+
   $('#message2').fadeIn(500)
   $('#message2').text('Signed Out Sucessfully')
   $('#message2').fadeOut(4500)
