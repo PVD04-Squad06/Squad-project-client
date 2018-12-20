@@ -60,7 +60,7 @@ const signUpFailure = error => {
 const signInSuccess = data => {
   store.user = data.user
   $('#message2').text('Signed in successfully')
-  $('#message2').fadeOut(5000)
+  $('#message2').fadeOut(4500)
   $('#message').removeClass()
   $('#message').addClass('success')
   $('#sign-in').trigger('reset')
@@ -107,8 +107,8 @@ const changePasswordFailure = error => {
 }
 
 const signOutSuccess = data => {
-  $('#message2').text('Signed out successfully')
-  $('#message2').fadeOut(5000)
+  $('#message2').text('Signed Out Sucessfully')
+  $('#message2').fadeOut(4500)
   store.user = null
   //   $('#message').removeClass()
   //   $('#message').addClass('success')
