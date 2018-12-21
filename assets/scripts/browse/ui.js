@@ -1,22 +1,6 @@
 'use strict'
 const store = require('./../store.js')
 
-const getAllProductsSuccess = data => {
-  console.log('getAllProductsSuccess running', data)
-}
-
-const getAllProductsFailure = error => {
-  console.log('getAllProductsFailure', error)
-}
-
-const getAProductSuccess = data => {
-  console.log('getAProductSuccess', data)
-}
-
-const getAProductFailure = error => {
-  console.log('getAProductFailure', error)
-}
-
 const addToCartSuccess = data => {
 //   console.log('addToCartSuccess', data)
 //   $('#shopping-cart').html('')
@@ -43,10 +27,6 @@ const addToCartSuccess = data => {
 //   })
 //   content += '</div>'
 //   $('#shopping-cart').html(content)
-}
-
-const addToCartFailure = error => {
-  console.log('addToCartFailure', error)
 }
 
 const getWomensClothingSuccess = function (data) {
@@ -123,12 +103,7 @@ const viewCartFailure = error => {
 }
 
 module.exports = {
-  getAllProductsSuccess,
-  getAllProductsFailure,
-  getAProductSuccess,
-  getAProductFailure,
   addToCartSuccess,
-  addToCartFailure,
   getWomensClothingSuccess,
   getMensClothingSuccess,
   viewCartSuccess,

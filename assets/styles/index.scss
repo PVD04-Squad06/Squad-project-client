@@ -15,7 +15,7 @@
 }
 
 .div-footer {
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: #edeaea;
   justify-content: space-between;
 }
 
@@ -50,6 +50,10 @@
   background-repeat: no-repeat;
   display: flex;
   margin: auto;
+  padding: 0;
+}
+
+#carouselExampleIndicators {
   padding: 0;
 }
 

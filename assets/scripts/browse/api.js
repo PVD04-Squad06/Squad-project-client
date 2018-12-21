@@ -3,6 +3,20 @@
 const config = require('./../config.js')
 const store = require('./../store.js')
 
+const womensClothingApi = function () {
+  return $.ajax({
+    url: config.apiUrl + '/products/womens-clothing',
+    method: 'GET'
+  })
+}
+
+const mensClothingApi = function () {
+  return $.ajax({
+    url: config.apiUrl + '/products/mens-clothing',
+    method: 'GET'
+  })
+}
+
 const addToCart = data => {
   console.log('addToCart', data)
 //   store.cart.items = store.cart.items.concat(data)
@@ -19,24 +33,22 @@ const addToCart = data => {
 //   })
 }
 
+const checkout = (data) => {
+  console.log(data)
+  // send a post to orders with product info
+  return $.ajax({
+    url: config.apiUrl + '/orders',
+    method: 'POST',
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    },
+    data
+  })
+}
 // using stripe documentation to checkout
 // const checkout = event => {
 //   console.log(event.target)
 // }
-
-const womensClothingApi = function () {
-  return $.ajax({
-    url: config.apiUrl + '/products/womens-clothing',
-    method: 'GET'
-  })
-}
-
-const mensClothingApi = function () {
-  return $.ajax({
-    url: config.apiUrl + '/products/mens-clothing',
-    method: 'GET'
-  })
-}
 
 // const getAllProducts = event => {
 //   console.log('getAllProducts', store.user)
@@ -64,6 +76,6 @@ const mensClothingApi = function () {
 module.exports = {
   addToCart,
   womensClothingApi,
-  mensClothingApi
-  // checkout
+  mensClothingApi,
+  checkout
 }
