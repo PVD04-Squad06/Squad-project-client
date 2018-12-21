@@ -20,7 +20,6 @@ $(() => {
   // See specific product by clicking on product square (get products with id)
   // $('#productId').on('submit', browseEvents.onGetAProduct)
   // Stripe checkout event listener
-  // $('#checkout').on('submit', browseEvents.onCheckout)
   // $('#productList').on('submit', authEvents.onAddToCart)
   // $('#view-cart').on('submit', authEvents.onViewCart)
   // $('#productList').on('submit', authEvents.onAddToCart)
@@ -28,5 +27,5 @@ $(() => {
   $('#mens').on('click', browseEvents.onGetMensClothing)
   $('#productList').on('submit', '.add-to-cart-women', browseEvents.onAddToCartWomen)
   $('#productList').on('submit', '.add-to-cart-men', browseEvents.onAddToCartMen)
-  // $('#productList').on('click', '.checkout', browseEvents.onCheckout)
+  $('#checkout').on('click', browseEvents.onCheckout)
 })

@@ -4,16 +4,16 @@ const api = require('./api.js')
 const ui = require('./ui.js')
 const store = require('../store.js')
 
+let cartProducts = []
 const onAddToCartWomen = event => {
   event.preventDefault()
   const productIdToBuy = event.target.id
-  // $('#shopping-cart').html('')
   const dataArrayWomen = store.womensProduct
-  // console.log(store.womensProduct)
   let content = '<table class="table">'
   dataArrayWomen.forEach(function (product) {
-    // const addToCart = $('.')
     if (productIdToBuy === product._id) {
+      // capture this product object and send it to checkout function
+      cartProducts.push(product)
       content += `<tr>
           <td class="productName">${product.name}</td>
           <td class="productPrice">$${product.price}</td>
@@ -28,14 +28,12 @@ const onAddToCartWomen = event => {
 
   let sum = $('#subTotal').html()
   sum = parseInt(sum.slice(1))
-  // console.log(sum)
   $('#cart .productPrice').each(function () {
     const num = this.innerHTML.slice(1)
     const subTotal = parseInt(sum) + parseInt(num)
-    // console.log(subTotal)
-    // console.log(sum)
     $('#subTotal').html(`$${subTotal}`)
   })
+  // console.log('cartProducts', cartProducts)
 }
 
 const onAddToCartMen = event => {
@@ -45,6 +43,7 @@ const onAddToCartMen = event => {
   let content = '<table class="table">'
   dataArrayMen.forEach(function (product) {
     if (productIdToBuy === product._id) {
+      cartProducts.push(product)
       content += `<tr>
           <td class="productName">${product.name}</td>
           <td class="productPrice">$${product.price}</td>
@@ -64,13 +63,16 @@ const onAddToCartMen = event => {
     const subTotal = parseInt(sum) + parseInt(num)
     $('#subTotal').html(`$${subTotal}`)
   })
+  // console.log('cartProducts', cartProducts)
 }
 
-const onCheckout = event => {
+const onCheckout = (event) => {
   event.preventDefault()
-  console.log(event.target)
   console.log('onCheckout')
-  api.checkout()
+  cartProducts = JSON.stringify(cartProducts)
+  // get data for product ids, names and prices
+  // console.log(cartProducts)
+  api.checkout(cartProducts)
     .then(ui.checkoutSuccess)
     .catch(ui.checkoutFailure)
 }
