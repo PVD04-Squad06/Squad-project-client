@@ -118,6 +118,9 @@ const signOutSuccess = data => {
   //   $('#message').addClass('success')
   $('#navbarOne').show()
   $('#navbarTwo').hide()
+  $('#productList').html('')
+  $('#jumbo').fadeIn('slow')
+
   //   $('#sign-out').modal('hide')
   //   $('.modal-backdrop').remove()
   //   console.log('signOutSuccess ran. Data is :', data)
