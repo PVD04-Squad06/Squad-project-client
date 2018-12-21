@@ -39,6 +39,7 @@ const checkout = (data) => {
   return $.ajax({
     url: config.apiUrl + '/orders',
     method: 'POST',
+    contentType: 'application/json',
     headers: {
       Authorization: 'Token token=' + store.user.token
     },
