@@ -10,12 +10,32 @@
   overflow: auto;
 }
 
+input {
+  background-color: inherit;
+}
+
+button {
+  font-variant: small-caps;
+}
+
+.navbar-brand {
+  font-variant: small-caps;
+}
+
+.modal-content {
+  background-color: rgba(192, 192, 192, 0.3);
+  color: white;
+  font-variant: small-caps;
+}
+
 .footer {
   border-style: solid;
+  background-color: rgba(192, 192, 192, 0.7);
 }
 
 .div-footer {
-  background-color: #edeaea;
+  background-color: rgba(192, 192, 192, 0.7);
+  font-variant: small-caps;
   justify-content: space-between;
 }
 
@@ -32,12 +52,14 @@
 }
 
 .nav-item {
+  font-variant: small-caps;
   align-content: center;
   margin: auto;
 }
 
 .table {
   // border: 1px solid black;
+  color: black;
   display: block;
   text-align: center;
   width: 100%;
