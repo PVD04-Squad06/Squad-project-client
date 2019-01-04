@@ -1,34 +1,6 @@
 'use strict'
 const store = require('./../store.js')
 
-const addToCartSuccess = data => {
-//   console.log('addToCartSuccess', data)
-//   $('#shopping-cart').html('')
-//   let content = '<div class="row">'
-//   const dataArray = data.products
-//   console.log(store.product)
-//   dataArray.forEach(function (product) {
-//     // const addToCart = $('.')
-//     content += `<div class="col-sm-4">
-//       <div class="card" id="imageDiv">
-//         <div class="card-body" id="imageDivalso">
-//           <h5 class="card-title"></h5>
-//           <form class="add-to-cart" id="${product._id}">
-//             <p class="card-text">${product.name}</p>
-//             <p class="card-text">$${product.price}</p>
-//           <form>
-//         </div>
-//       </div>
-//     </div>`
-//     // <button class="btn btn-dark add-to-cart" id="${product._id}">Add to cart</button>
-//     // store.product._id = product
-//     // console.log(product)
-//     // console.log(product.image)
-//   })
-//   content += '</div>'
-//   $('#shopping-cart').html(content)
-}
-
 const getWomensClothingSuccess = function (data) {
   $('#productList').html('')
   $('#jumbo').fadeOut('slow')
@@ -87,6 +59,10 @@ const getMensClothingSuccess = function (data) {
   $('#productList').html(content)
 }
 
+const checkoutSuccess = data => {
+  console.log(data)
+}
+
 const viewCartSuccess = data => {
   $('#message').text('view cart successfully')
   $('#message').removeClass()
@@ -103,7 +79,7 @@ const viewCartFailure = error => {
 }
 
 module.exports = {
-  addToCartSuccess,
+  checkoutSuccess,
   getWomensClothingSuccess,
   getMensClothingSuccess,
   viewCartSuccess,
