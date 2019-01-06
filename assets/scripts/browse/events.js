@@ -77,6 +77,13 @@ const onCheckout = (event) => {
     .catch(ui.checkoutFailure)
 }
 
+const onRetrieve = (event) => {
+  event.preventDefault()
+  api.orderHistoryApi()
+    .then(ui.orderHistSuccess)
+    .catch(ui.orderHistFailure)
+}
+
 const onGetWomensClothing = event => {
   event.preventDefault()
   api.womensClothingApi()
@@ -106,5 +113,6 @@ module.exports = {
   onGetMensClothing,
   onAddToCartWomen,
   onAddToCartMen,
-  onCheckout
+  onCheckout,
+  onRetrieve
 }

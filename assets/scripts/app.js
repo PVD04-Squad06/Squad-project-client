@@ -28,4 +28,5 @@ $(() => {
   $('#productList').on('submit', '.add-to-cart-women', browseEvents.onAddToCartWomen)
   $('#productList').on('submit', '.add-to-cart-men', browseEvents.onAddToCartMen)
   $('#checkout').on('click', browseEvents.onCheckout)
+  $('#orderHist').on('click', browseEvents.onRetrieve)
 })

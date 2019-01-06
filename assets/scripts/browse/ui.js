@@ -78,10 +78,22 @@ const viewCartFailure = error => {
   console.error('viewCartFailure ran. Error is :', error)
 }
 
+const orderHistSuccess = data => {
+  $('#orderHistMsg').text('Your current order history')
+  $('#orderHistBody').text(data)
+}
+
+const orderHistFailure = error => {
+  $('#orderHistMsg').text('Unable to Generate Order History')
+  console.error('orderHistFailure ran> Error is :', error)
+}
+
 module.exports = {
   checkoutSuccess,
   getWomensClothingSuccess,
   getMensClothingSuccess,
   viewCartSuccess,
-  viewCartFailure
+  viewCartFailure,
+  orderHistSuccess,
+  orderHistFailure
 }

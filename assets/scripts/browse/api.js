@@ -46,6 +46,17 @@ const checkout = (data) => {
     data
   })
 }
+
+const orderHistoryApi = function () {
+  return $.ajax({
+    url: config.apiUrl + '/orders',
+    method: 'GET',
+    contentType: 'application/json',
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    }
+  })
+}
 // using stripe documentation to checkout
 // const checkout = event => {
 //   console.log(event.target)
@@ -78,5 +89,6 @@ module.exports = {
   addToCart,
   womensClothingApi,
   mensClothingApi,
+  orderHistoryApi,
   checkout
 }
