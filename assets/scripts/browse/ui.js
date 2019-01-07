@@ -79,8 +79,12 @@ const viewCartFailure = error => {
 }
 
 const orderHistSuccess = data => {
+  const displayOrder = data.orders.map(order => {
+    console.log(order.cart)
+  })
   $('#orderHistMsg').text('Your current order history')
-  $('#orderHistBody').text(data)
+  $('#orderHistBody').text(data.orders)
+  console.log(displayOrder)
 }
 
 const orderHistFailure = error => {
