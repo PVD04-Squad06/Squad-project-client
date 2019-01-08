@@ -79,12 +79,27 @@ const viewCartFailure = error => {
 }
 
 const orderHistSuccess = data => {
-  const displayOrder = data.orders.map(order => {
-    console.log(order.cart)
+  // let sum = 0
+  let content = '<table class="table">'
+  // iterate through data.orders to get created date
+  // debugger
+  data.orders.forEach(function (order) {
+    order.cart.forEach(function (product) {
+    // nested iteration through cart
+    // now you can access properties using dot notation in cart (.name.price)
+    // add to sum, sum = 0
+    // append to html content
+    // once done iterating append to DOM using jquery
+    // would like to show date, names of items in cart and total price
+      content += `<tr>
+        <td class="productName">${product.name}</td>
+    </tr>`
+    }
+    )
   })
   $('#orderHistMsg').text('Your current order history')
-  $('#orderHistBody').text(data.orders)
-  console.log(displayOrder)
+  $('#orderHistBody').append(content)
+  console.log(data)
 }
 
 const orderHistFailure = error => {
