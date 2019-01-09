@@ -29,3 +29,5 @@ As of Friday, December 21, 2018. This project is still in development. Payment p
 
 Among our overall planning documents, wireframes, erd and wireframes; our MVP Standards can be seen here:
 https://www.evernote.com/l/AKXK3YZk0LhH3aTagYmiMofsDHm3T_Oz9js
+
+Images for our project were used from a www.revolve.com.
