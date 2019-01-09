@@ -28,7 +28,7 @@ const onSignIn = event => {
 const onChangePassword = event => {
   event.preventDefault()
   const data = getFormFields(event.target)
-  console.log(data)
+  // console.log(data)
   api.changePassword(data)
     .then(ui.changePasswordSuccess)
     .catch(ui.changePasswordFailure)
@@ -61,7 +61,7 @@ const onSignOut = event => {
 
 const onMbrSign = event => {
   event.preventDefault()
-  console.log('mrbsign clicked')
+  // console.log('mrbsign clicked')
   $('#mbrsign').text('You are now an exclusive member of this fictional company!')
   // $('#sign-up').trigger('reset')
 }

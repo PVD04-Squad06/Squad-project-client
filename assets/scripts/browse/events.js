@@ -68,7 +68,7 @@ const onAddToCartMen = event => {
 
 const onCheckout = (event) => {
   event.preventDefault()
-  console.log('onCheckout')
+  // console.log('onCheckout')
   cartProducts = JSON.stringify(cartProducts)
   // get data for product ids, names and prices
   // console.log(cartProducts)

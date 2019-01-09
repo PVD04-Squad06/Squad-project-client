@@ -18,7 +18,7 @@ const mensClothingApi = function () {
 }
 
 const addToCart = data => {
-  console.log('addToCart', data)
+  // console.log('addToCart', data)
 //   store.cart.items = store.cart.items.concat(data)
 //   // define data with button's id
 //   // const data =
@@ -34,7 +34,7 @@ const addToCart = data => {
 }
 
 const checkout = (data) => {
-  console.log(data)
+  // console.log(data)
   // send a post to orders with product info
   return $.ajax({
     url: config.apiUrl + '/orders',

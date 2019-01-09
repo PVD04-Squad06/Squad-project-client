@@ -60,7 +60,7 @@ const getMensClothingSuccess = function (data) {
 }
 
 const checkoutSuccess = data => {
-  console.log(data)
+  // console.log(data)
 }
 
 const viewCartSuccess = data => {
@@ -68,14 +68,14 @@ const viewCartSuccess = data => {
   $('#message').removeClass()
   $('#message').addClass('success')
   $('#change-password').trigger('reset')
-  console.log('viewCartSuccess ran. Data is :', data)
+  // console.log('viewCartSuccess ran. Data is :', data)
 }
 
-const viewCartFailure = error => {
+const viewCartFailure = () => {
   $('#message').text('Error on view cart')
   $('#message').removeClass()
   $('#message').addClass('failure')
-  console.error('viewCartFailure ran. Error is :', error)
+  // console.error('viewCartFailure ran. Error is :', error)
 }
 
 const orderHistSuccess = data => {
@@ -84,6 +84,9 @@ const orderHistSuccess = data => {
   // iterate through data.orders to get created date
   // debugger
   data.orders.forEach(function (order) {
+    content += `<tr>
+      <td class="orderCreatedAt">Order #: ${order.createdAt}</td>
+  </tr>`
     order.cart.forEach(function (product) {
     // nested iteration through cart
     // now you can access properties using dot notation in cart (.name.price)
@@ -93,18 +96,19 @@ const orderHistSuccess = data => {
     // would like to show date, names of items in cart and total price
       content += `<tr>
         <td class="productName">${product.name}</td>
+        <td class="productPrice">${product.price}</td>
     </tr>`
-    }
-    )
+      // product[i].price + product[i+1].price
+    })
   })
   $('#orderHistMsg').text('Your current order history')
   $('#orderHistBody').append(content)
-  console.log(data)
+  // console.log(data)
 }
 
-const orderHistFailure = error => {
+const orderHistFailure = () => {
   $('#orderHistMsg').text('Unable to Generate Order History')
-  console.error('orderHistFailure ran> Error is :', error)
+  // console.error('orderHistFailure ran> Error is :', error)
 }
 
 module.exports = {
