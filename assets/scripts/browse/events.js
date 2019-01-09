@@ -68,13 +68,20 @@ const onAddToCartMen = event => {
 
 const onCheckout = (event) => {
   event.preventDefault()
-  console.log('onCheckout')
+  // console.log('onCheckout')
   cartProducts = JSON.stringify(cartProducts)
   // get data for product ids, names and prices
   // console.log(cartProducts)
   api.checkout(cartProducts)
     .then(ui.checkoutSuccess)
     .catch(ui.checkoutFailure)
+}
+
+const onRetrieve = (event) => {
+  event.preventDefault()
+  api.orderHistoryApi()
+    .then(ui.orderHistSuccess)
+    .catch(ui.orderHistFailure)
 }
 
 const onGetWomensClothing = event => {
@@ -106,5 +113,6 @@ module.exports = {
   onGetMensClothing,
   onAddToCartWomen,
   onAddToCartMen,
-  onCheckout
+  onCheckout,
+  onRetrieve
 }

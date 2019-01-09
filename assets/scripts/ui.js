@@ -50,7 +50,7 @@ const signUpSuccess = data => {
   // console.log('signUpSuccess ran. Data is :', data)
 }
 
-const signUpFailure = error => {
+const signUpFailure = () => {
   $('#message1').text('Sorry, sign-up was unsuccessful')
   $('#message').removeClass()
   $('#message').addClass('failure')
@@ -76,11 +76,11 @@ const signInSuccess = data => {
   // console.log('signInSuccess ran. Data is :', data)
 }
 
-const signInFailure = error => {
+const signInFailure = () => {
   $('#message3').text('Error on sign in')
   $('#message').removeClass()
   $('#message').addClass('failure')
-  console.error('signInFailure ran. Error is :', error)
+  // console.error('signInFailure ran. Error is :', error)
   // alert('Sign In unsuccessful')
 }
 
@@ -130,7 +130,7 @@ const signOutSuccess = data => {
   //       $('#costumes').hide()
 }
 
-const signOutFailure = error => {
+const signOutFailure = () => {
   $('#message2').text('Error on sign out')
   $('#message2').fadeOut(5000)
   // $('#message').removeClass()

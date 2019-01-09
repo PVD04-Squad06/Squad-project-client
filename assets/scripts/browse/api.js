@@ -18,7 +18,7 @@ const mensClothingApi = function () {
 }
 
 const addToCart = data => {
-  console.log('addToCart', data)
+  // console.log('addToCart', data)
 //   store.cart.items = store.cart.items.concat(data)
 //   // define data with button's id
 //   // const data =
@@ -34,15 +34,27 @@ const addToCart = data => {
 }
 
 const checkout = (data) => {
-  console.log(data)
+  // console.log(data)
   // send a post to orders with product info
   return $.ajax({
     url: config.apiUrl + '/orders',
     method: 'POST',
+    contentType: 'application/json',
     headers: {
       Authorization: 'Token token=' + store.user.token
     },
     data
+  })
+}
+
+const orderHistoryApi = function () {
+  return $.ajax({
+    url: config.apiUrl + '/orders',
+    method: 'GET',
+    contentType: 'application/json',
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    }
   })
 }
 // using stripe documentation to checkout
@@ -77,5 +89,6 @@ module.exports = {
   addToCart,
   womensClothingApi,
   mensClothingApi,
+  orderHistoryApi,
   checkout
 }

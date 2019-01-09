@@ -1,34 +1,6 @@
 'use strict'
 const store = require('./../store.js')
 
-const addToCartSuccess = data => {
-//   console.log('addToCartSuccess', data)
-//   $('#shopping-cart').html('')
-//   let content = '<div class="row">'
-//   const dataArray = data.products
-//   console.log(store.product)
-//   dataArray.forEach(function (product) {
-//     // const addToCart = $('.')
-//     content += `<div class="col-sm-4">
-//       <div class="card" id="imageDiv">
-//         <div class="card-body" id="imageDivalso">
-//           <h5 class="card-title"></h5>
-//           <form class="add-to-cart" id="${product._id}">
-//             <p class="card-text">${product.name}</p>
-//             <p class="card-text">$${product.price}</p>
-//           <form>
-//         </div>
-//       </div>
-//     </div>`
-//     // <button class="btn btn-dark add-to-cart" id="${product._id}">Add to cart</button>
-//     // store.product._id = product
-//     // console.log(product)
-//     // console.log(product.image)
-//   })
-//   content += '</div>'
-//   $('#shopping-cart').html(content)
-}
-
 const getWomensClothingSuccess = function (data) {
   $('#productList').html('')
   $('#jumbo').fadeOut('slow')
@@ -87,25 +59,64 @@ const getMensClothingSuccess = function (data) {
   $('#productList').html(content)
 }
 
+const checkoutSuccess = data => {
+  // console.log(data)
+}
+
 const viewCartSuccess = data => {
   $('#message').text('view cart successfully')
   $('#message').removeClass()
   $('#message').addClass('success')
   $('#change-password').trigger('reset')
-  console.log('viewCartSuccess ran. Data is :', data)
+  // console.log('viewCartSuccess ran. Data is :', data)
 }
 
-const viewCartFailure = error => {
+const viewCartFailure = () => {
   $('#message').text('Error on view cart')
   $('#message').removeClass()
   $('#message').addClass('failure')
-  console.error('viewCartFailure ran. Error is :', error)
+  // console.error('viewCartFailure ran. Error is :', error)
+}
+
+const orderHistSuccess = data => {
+  // let sum = 0
+  let content = '<table class="table">'
+  // iterate through data.orders to get created date
+  // debugger
+  data.orders.forEach(function (order) {
+    content += `<tr>
+      <td class="orderCreatedAt">Order #: ${order.createdAt}</td>
+  </tr>`
+    order.cart.forEach(function (product) {
+    // nested iteration through cart
+    // now you can access properties using dot notation in cart (.name.price)
+    // add to sum, sum = 0
+    // append to html content
+    // once done iterating append to DOM using jquery
+    // would like to show date, names of items in cart and total price
+      content += `<tr>
+        <td class="productName">${product.name}</td>
+        <td class="productPrice">${product.price}</td>
+    </tr>`
+      // product[i].price + product[i+1].price
+    })
+  })
+  $('#orderHistMsg').text('Your current order history')
+  $('#orderHistBody').append(content)
+  // console.log(data)
+}
+
+const orderHistFailure = () => {
+  $('#orderHistMsg').text('Unable to Generate Order History')
+  // console.error('orderHistFailure ran> Error is :', error)
 }
 
 module.exports = {
-  addToCartSuccess,
+  checkoutSuccess,
   getWomensClothingSuccess,
   getMensClothingSuccess,
   viewCartSuccess,
-  viewCartFailure
+  viewCartFailure,
+  orderHistSuccess,
+  orderHistFailure
 }
